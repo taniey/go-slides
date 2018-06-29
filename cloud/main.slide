@@ -1,0 +1,84 @@
+公有云资源管理
+51reboot 2018-06-28
+
+Monkey
+zhengyscn@gmail.com
+https://github.com/zhengyscn
+
+
+* 大纲
+
+- 公有云市场(全球|中国)
+
+- 公有云服务介绍
+
+- 公有云经典案例分析
+
+- 精彩小视频
+
+- Q&A
+
+
+* 公有云市场(全球|中国)
+
+* 全球市场份额占比
+亚马逊定位中高端和政府客户 [[http://baijiahao.baidu.com/s?id=1588088058422838053&wfr=spider&for=pc][全球云排名]]
+.image slide/global_cloud1.png _ 300
+
+.image slide/market_share.png _ 370
+
+
+
+* 中国市场份额占比
+阿里云以中小企业和个人用户为主 [[http://www.reeko.net.cn/page108?article_id=240][中国云排名]]
+
+.image slide/china_cloud.png _ 500
+    
+    
+* 公有云服务介绍
+
+* Amazon(aws)
+.image slide/aws-service-intro.png _ 800
+
+* Amazon(aws console)
+.image slide/aws_console.png _ 900
+
+
+* AliCloud
+.image slide/ali-service-intro.png _ 800
+
+* TenCloud
+
+* 工具 
+
+[[https://github.com/widdix/aws-cf-templates][AWS CloudFormation Templates)]]
+
+[[https://help.aliyun.com/document_detail/28852.html][Ali 资源编排服务(ROS)]]
+
+[[https://api.aliyun.com/?spm=a2c1g.8271268.10000.2.1ef2df25JuVvGg][阿里云(在线生成SDK Demo平台))]]
+
+
+
+* 公有云经典案例分析
+
+* 实例名和主机名同步
+
+.image slide/sync_hostname.png _ 800
+
+* 批量创建50+台机器
+.image slide/bulk_create.png _ 800
+         
+* 如何自动的维护云主机信息
+.image slide/sync_assets.png _ 800
+
+* 云主机故障时如何自动恢复及通知
+.image slide/hostname_alarm.png _ 800
+
+* 精彩小视频
+
+.link https://www.bilibili.com/video/av25190730/ Python Upgrade 3.6 on bilibili
+
+.link https://www.bilibili.com/video/av24737197/ Python List on bilibili
+
+* Q&A
+.image slide/51reboot-wechat.png _ 500
