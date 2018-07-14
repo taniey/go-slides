@@ -104,7 +104,6 @@ http://github.com/zhengyscn
 * Coding
 
 .code -edit -numbers scripts/hello.py
-.play scripts/main.go
 
 .link http://golang.org golang.org
 
