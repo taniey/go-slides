@@ -5,7 +5,7 @@ zhengyscn@gmail.com
 http://github.com/zhengyscn
 
 * 大纲
-.background imgs/background2.png
+.background imgs/bg.png
 - 课程介绍
 - 学习目标
 - Python介绍
@@ -20,18 +20,18 @@ http://github.com/zhengyscn
 
 
 * 课程介绍
-.background imgs/background2.png
+.background imgs/bg.png
 .image imgs/课程总览.png _ 420
 
 
 
 * 学习目标
-.background imgs/background2.png
+.background imgs/bg.png
 
 
 
 * Python介绍
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 什么是Python
 - Python之父
@@ -41,13 +41,13 @@ http://github.com/zhengyscn
 - Python应用场景
 
 * 什么是Python
-.background imgs/background2.png
+.background imgs/bg.png
 
 * Python之父
-.background imgs/background2.png
+.background imgs/bg.png
 
 * Python特点
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 简单易学
 - 优雅健壮
@@ -57,10 +57,10 @@ http://github.com/zhengyscn
 - 可扩展、可嵌入
 
 * Python生态系统
-.background imgs/background2.png
+.background imgs/bg.png
 
 * Python应用场景
-.background imgs/background2.png
+.background imgs/bg.png
 
 - Web开发
     - Flask
@@ -80,34 +80,38 @@ http://github.com/zhengyscn
     
 
 * 准备环境
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 操作系统   ：CentOS 6.x
-- Python版本 ：3.6.4[https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz]
+- Python版本 ：3.6.4
 - IDE开发工具：Vim | PyCharm
 
 - 注意：
     如果是Win系统，建议使用虚拟机，比如Vmware 或 Vagrant；如果是Mac系统请忽略此项。
 
 * 第一个Python程序
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 环境
     >>> hello world ???
     1. 交互式环境
     2. 脚本方式
-
+    
 - 四则运算
     1. + - * / // %
-
-
+    
 - 备注
     1. print 为Python的函数指令，用于让计算机打印括号中的内容。
     2. exit  为python交互式环境下的函数指令，用于退出交互式环境。
     
+    
+* 示例
+
+
+    
 
 * 变量
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 变量命名规则
     - 只能由大小写英文字母、数字、下划线组成
@@ -118,7 +122,7 @@ http://github.com/zhengyscn
 
 
 * 数据类型
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 数值
 - 字符串
@@ -127,7 +131,7 @@ http://github.com/zhengyscn
 
 
 * 流程控制
-.background imgs/background2.png
+.background imgs/bg.png
 
 - 条件语句
 
@@ -138,7 +142,7 @@ http://github.com/zhengyscn
 
 
 * 循环
-.background imgs/background2.png
+.background imgs/bg.png
 
 - for循环
 - while循环
@@ -149,7 +153,7 @@ http://github.com/zhengyscn
 
 
 * Coding
-.background imgs/background2.png
+.background imgs/bg.png
 .code -edit -numbers scripts/hello.py
 
 .link http://golang.org golang.org
@@ -157,8 +161,8 @@ http://github.com/zhengyscn
 
 
 * Q&A
-.background imgs/background2.png
+.background imgs/bg.png
 
-.image imgs/QA.png
+.image imgs/qa.png
 
 .caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
