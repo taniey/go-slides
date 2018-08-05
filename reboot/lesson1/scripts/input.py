@@ -1,7 +1,5 @@
+num1 = input("Please input num1: ")
+num2 = input("Please input num2: ")
 
-
-input("Please input your name: ")
-
-
-name = input("Please input your name: ")
-print("name", name)
+print("num1: ", num1)
+print("num2: ", num2)

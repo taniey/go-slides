@@ -1,8 +1,12 @@
 Lesson1
-monkey by 51reboot
+Monkey by 51reboot
 
 zhengyscn@gmail.com
 http://github.com/zhengyscn
+
+
+* 课程介绍
+.background imgs/bg.png
 
 * 大纲
 .background imgs/bg.png
@@ -18,46 +22,46 @@ http://github.com/zhengyscn
 - Q&A
 
 
-
-* 课程介绍
-.background imgs/bg.png
-.image imgs/课程总览.png _ 420
-
-
-
-* 学习目标
-.background imgs/bg.png
-
-
-
 * Python介绍
 .background imgs/bg.png
 
-- 什么是Python
-- Python之父
-- 为什么选择Python
+- Python是什么
 - Python特点
 - Python生态系统
 - Python应用场景
 
-* 什么是Python
+* Python是什么
 .background imgs/bg.png
 
-* Python之父
-.background imgs/bg.png
+- Python(蟒蛇) 是一种解释性、编译性、和面向对象的脚本语言。
+- Python 由 Guido van Rossum 于 1989 年底在荷兰国家数学和计算机科学研究所发明，第一个公开发行版发行于 1991 年。
+
+.image imgs/guido.png _ 280
 
 * Python特点
 .background imgs/bg.png
 
-- 简单易学
-- 优雅健壮
-- 功能强大
+- 易于学习
+- 易于阅读
+- 易于维护
+- 强大的标准库
 - 面向对象
-- 可移植
-- 可扩展、可嵌入
+- 可移植、可扩展、可嵌入
 
 * Python生态系统
 .background imgs/bg.png
+
+- 社区
+
+.link http://pypi.python.org/ pypi
+.link http://github.com/ github
+.link https://stackoverflow.com stackoverflow
+	
+- 成功案例
+	国内：豆瓣、知乎、BAT、新浪、网易 ...
+	国外：谷哥、YouTube、Facebook...
+	
+
 
 * Python应用场景
 .background imgs/bg.png
@@ -67,7 +71,7 @@ http://github.com/zhengyscn
     - Django
     
 - 云计算
-    - openstack
+    - OpenStack
     
 - 系统管理工具
     - Ansible
@@ -75,8 +79,6 @@ http://github.com/zhengyscn
 
 - 爬虫
     - Scrapy
-
-- 自动化测试
     
 
 * 准备环境
@@ -94,21 +96,26 @@ http://github.com/zhengyscn
 
 - 环境
     >>> hello world ???
-    1. 交互式环境
+    1. 交互式环境(使用场景 ???)
     2. 脚本方式
     
 - 四则运算
-    1. + - * / // %
+    1. 加(+)、减(-)、乘(*)、除(/)、整除(//)、余(%)、幂(**)
     
 - 备注
     1. print 为Python的函数指令，用于让计算机打印括号中的内容。
-    2. exit  为python交互式环境下的函数指令，用于退出交互式环境。
+    2. exit(Ctrl + D)  为python交互式环境下的函数指令，用于退出交互式环境。
     
     
-* 示例
+* 示例1
+.background imgs/bg.png
+.image imgs/python-hello1.png _ 800
 
+.image imgs/python-hello2.png _ 800   
 
-    
+* 示例2
+.background imgs/bg.png
+.image imgs/python-jisuan.png _ 800  
 
 * 变量
 .background imgs/bg.png
@@ -120,44 +127,131 @@ http://github.com/zhengyscn
 - 变量名必须先定义在使用
 
 
+* 示例1
+.background imgs/bg.png
+.code -edit -numbers scripts/var.py
+
+
+* 接收命令行语句
+.background imgs/bg.png
+.code -edit scripts/input.py
+
+* 练习
+.background imgs/bg.png
+
+- 输入6个数字(整型)
+	1. 求合计
+
+
+
 
 * 数据类型
 .background imgs/bg.png
 
-- 数值
+- 整数
+	- 年龄
+- 浮点数
+	- 身高、圆周率
 - 字符串
+	- 一句话、一段话
 - 布尔类型
+	- 表示真假、只有True 和 False两个值。
 
 
+* 布尔类型运算
+.background imgs/bg.png
+- 布尔运算
+
+	1. 或 (A or B：A、B两个只要一个为真则为真)
+	2. 且 (A and B：A、B两个都为真时才为真
+	3. 非 (not A： A为真则为假，A为假则为真)
+	
+* 示例
+.background imgs/bg.png
+.code -edit -numbers scripts/value.py
+
+
+* 类型判断 与 转换
+.background imgs/bg.png
+- type函数
+.image imgs/python-type.png
+
+- 类型转换
+    int <--> str <--> float <--> int
 
 * 流程控制
 .background imgs/bg.png
 
-- 条件语句
+- 分支语句
+.code -edit scripts/if3.py
 
-    1. 单分支语句
-    2. 双分支语句
-    3. 多分支语句
+- 注意
+	1. 每个条件后面要使用冒号 :，表示接下来是满足条件后要执行的语句块。
+	2. 使用缩进来划分语句块，相同缩进数的语句在一起组成一个语句块。
+	3. 在 Python 中没有 switch - case 语句。
 
-
-
+* 练习
+	
+- 输入用户名，性别、年龄
+	输出：你好XXX先生(女士)，您的年龄低于(高于)18岁，(不)可以进入
+	
 * 循环
 .background imgs/bg.png
 
-- for循环
-- while循环
+* for循环
+.background imgs/bg.png
+.code -edit scripts/for.py
+
+
+* 示例
+.code -edit scripts/for1.py
+
+.code -edit scripts/for2.py
+
+.code -edit scripts/for_range.py
+
+* while循环
+.background imgs/bg.png
+.code -edit scripts/while.py
+
 - 控制循环
     - break 跳出整个循环
     - continue 终止当前循环，进入下一循环
+    - pass 空语句 是为了保持程序结构的完整性。pass 不做任何事情，一般用做占位语句。
 
+* 示例
+.code -edit scripts/while1.py
+	
+.code -edit scripts/while2.py
 
-
-* Coding
+* 练习
 .background imgs/bg.png
-.code -edit -numbers scripts/hello.py
 
-.link http://golang.org golang.org
+- 输入6个数字(整型)
+    1.求合计
 
+- 计算1到100的和
+	1. 打印结果
+
+- 输入多个数字(整型),直到输入0结束
+	1.求合计
+	2.求最大值
+
+
+* 作业
+.background imgs/bg.png
+- 打印乘法口诀
+	提示：尝试print(‘monkey’)与print(‘monkey’, end=‘’)的区别
+
+
+- 猜数游戏
+	1.猜一个100以内的整数
+	2.6次机会
+	3.每次猜时，猜对了，大了，小了
+	
+	提示：生成随机数的方法
+	import random
+	random.randint(0, 100)
 
 
 * Q&A
