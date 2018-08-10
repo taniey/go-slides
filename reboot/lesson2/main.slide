@@ -7,6 +7,7 @@ http://github.com/zhengyscn
 * 大纲
 .background imgs/bg.png
 
+- 上节回顾
 - 字符串
 - 列表
 - 元组
@@ -37,6 +38,13 @@ http://github.com/zhengyscn
 	
 * 操作
 .background imgs/bg.png
+
+- 访问
+- 修改
+- 遍历
+- 函数
+- 运算
+- 方法
 
 * 访问
 .background imgs/bg.png
@@ -79,7 +87,7 @@ http://github.com/zhengyscn
 * 方法
 .background imgs/bg.png
 
-.image imgs/str_all2.png 570 200
+.code -edit scripts/str6.py
 	
 * 示例
 .background imgs/bg.png
@@ -99,7 +107,7 @@ http://github.com/zhengyscn
 - 定义
 - 操作
 - 函数
-- 解析式、推导式
+- 解析式
 
 
 * List定义
@@ -159,7 +167,6 @@ http://github.com/zhengyscn
 * 示例
 .background imgs/bg.png
 
-- xxx
 
 * 练习
 .background imgs/bg.png
@@ -212,9 +219,13 @@ http://github.com/zhengyscn
 - 字符串和列表的方法写中文文档及示例
 
 - 用户管理系统
-	1. 友好的提示和输出
-	2. 功能性,支持增删改查和搜索
-	3. 健壮性
+    1. 登录认证；
+    2. 增删改查和搜索
+    3. 格式化输出   
+    
+    扩展：
+    1. 分页
+    2. 持久化
 
 
 - 冒泡排序

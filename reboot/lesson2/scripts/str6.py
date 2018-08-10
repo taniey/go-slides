@@ -1,5 +1,6 @@
 
 
 
-s = ""
-print(dir(s))
+>>> print(dir(str))
+
+>>> print(help(str))
