@@ -1,0 +1,79 @@
+Lesson3
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 上节回顾
+- 字符串
+- 字典
+- 模块
+- 文件操作
+- 异常处理
+
+
+
+* 字典
+
+* 模块
+
+- 标准模块
+    
+    - os
+    - sys
+    - time
+    - json
+    - shelve
+    - signal
+    - logging
+    - datetime
+    - hashlib
+    
+
+- 第三方模块
+    - requests
+    - paramikio
+    - csv
+    - psutil
+    
+    
+* 示例
+
+- 钉钉接口开发
+
+    
+* 文件操作
+
+- Read
+
+- Write
+
+
+* 示例
+
+- Ngx日志处理
+
+* 异常处理
+
+
+
+
+
+* 作业
+.background imgs/bg.png
+
+- xxx
+
+- xxx
+
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
