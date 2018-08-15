@@ -17,12 +17,15 @@ http://github.com/zhengyscn
 
 
 * 上节回顾
+.background imgs/bg.png
 
 * 示例1
+.background imgs/bg.png
 
 .code -edit scripts/t1.py
 
 * 示例2
+.background imgs/bg.png
 
 - 跳出多层循环
 	
@@ -32,12 +35,15 @@ http://github.com/zhengyscn
 	- break
 
 * 经典面试题2
+.background imgs/bg.png
 
 * 示例1
+.background imgs/bg.png
 .code -edit scripts/list_remove.py
 
 
 * 示例2
+.background imgs/bg.png
 
 .code -edit scripts/value_memaddress.py
 
@@ -48,6 +54,7 @@ http://github.com/zhengyscn
 	
 
 * 字典
+.background imgs/bg.png
 
 - 定义
 
@@ -56,10 +63,12 @@ http://github.com/zhengyscn
 
 
 * 定义
+.background imgs/bg.png
 
 .code -edit scripts/d1.py
 
 * 操作
+.background imgs/bg.png
 
 - 通过key 使用数据项，读取，修改、删除
 - len(dict)
@@ -69,6 +78,7 @@ http://github.com/zhengyscn
    
 
 * 示例
+.background imgs/bg.png
 
 - 如下列表，求每种语言出现的次数
 	- ['python', 'go', 'go', 'java', 'c', 'python', 'ruby', 'python']
@@ -78,6 +88,7 @@ http://github.com/zhengyscn
 
    
 * 文件操作
+.background imgs/bg.png
 
 - Read
 
@@ -86,11 +97,13 @@ http://github.com/zhengyscn
 .link https://github.com/467754239/python/blob/master/basic/file.md file link
 
 * 示例
+.background imgs/bg.png
 
 - Ngx日志处理
 
 
 * 模块
+.background imgs/bg.png
 
 - 标准模块
 	- sys
@@ -101,20 +114,25 @@ http://github.com/zhengyscn
     - csv
     
 * 语法
+.background imgs/bg.png
 
 .code -edit scripts/pkg1.py
 
 
 * 示例
+.background imgs/bg.png
 
 
 
 * 异常处理
+.background imgs/bg.png
 
 * 示例
+.background imgs/bg.png
 .code -edit scripts/except1.py
 
 * 语法
+.background imgs/bg.png
 .code -edit scripts/except_syntax.py
 
 
