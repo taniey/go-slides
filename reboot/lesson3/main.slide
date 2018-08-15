@@ -8,66 +8,129 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 上节回顾
+- 经典面试题
 - 字符串
 - 字典
-- 模块
 - 文件操作
+- 模块
 - 异常处理
 
 
+* 上节回顾
+
+* 示例1
+
+.code -edit scripts/t1.py
+
+* 示例2
+
+- 跳出多层循环
+	
+- 区别?
+	- exit
+	- sys.exit
+	- break
+
+* 经典面试题2
+
+* 示例1
+.code -edit scripts/list_remove.py
+
+
+* 示例2
+
+.code -edit scripts/value_memaddress.py
+
+- 结论
+	== 判断的是值是否相等
+	is 判断的是在内存空间存储的位置是否相同
+	
+	
 
 * 字典
 
-* 模块
+- 定义
 
-- 标准模块
-    
-    - os
-    - sys
-    - time
-    - json
-    - shelve
-    - signal
-    - logging
-    - datetime
-    - hashlib
-    
+- 操作
 
-- 第三方模块
-    - requests
-    - paramikio
-    - csv
-    - psutil
-    
-    
+
+
+* 定义
+
+.code -edit scripts/d1.py
+
+* 操作
+
+- 通过key 使用数据项，读取，修改、删除
+- len(dict)
+- for k in dict:	#对k的遍历
+- 字典是无序的 反而列表时有序的
+
+   
+
 * 示例
 
-- 钉钉接口开发
+- 如下列表，求每种语言出现的次数
+	- ['python', 'go', 'go', 'java', 'c', 'python', 'ruby', 'python']
+	- {'python' : 3, 'go' : 2, '' : 'c', 1: 'java' : 1, 'ruby' : 1}
+	
+	- 尽情发挥，可以用多种方式实现；
 
-    
+   
 * 文件操作
 
 - Read
 
 - Write
 
+.link https://github.com/467754239/python/blob/master/basic/file.md file link
 
 * 示例
 
 - Ngx日志处理
 
+
+* 模块
+
+- 标准模块
+	- sys
+	- json
+	- datetime
+
+- 第三方模块
+    - csv
+    
+* 语法
+
+.code -edit scripts/pkg1.py
+
+
+* 示例
+
+
+
 * 异常处理
 
+* 示例
+.code -edit scripts/except1.py
 
+* 语法
+.code -edit scripts/except_syntax.py
 
 
 
 * 作业
 .background imgs/bg.png
 
-- xxx
+- 用户管理系统V2
+	- 数据结构：字典
+	- 分页
+	- 持久化
+	- 异常处理
 
-- xxx
+- Ngx日志分析
+
+- 钉钉接口开发
 
 
 
