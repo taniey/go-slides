@@ -6,10 +6,10 @@ print(int(s1))
 '''
 
 s2 = 'hello'
-# print(int(s2))
+print(int(s2))
 
 l = [1, 2, 3]
-# print(l[3])
+print(l[3])
 
 print(address)
 

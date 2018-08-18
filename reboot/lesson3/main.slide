@@ -8,12 +8,13 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 上节回顾
+- 上节进阶
 - 经典面试题
-- 字符串
 - 字典
 - 文件操作
 - 模块
-- 异常处理
+- 错误和异常
+
 
 
 * 上节回顾
@@ -24,17 +25,51 @@ http://github.com/zhengyscn
 
 .code -edit scripts/t1.py
 
+
+
 * 示例2
 .background imgs/bg.png
-
-- 跳出多层循环
 	
-- 区别?
-	- exit
-	- sys.exit
-	- break
+- break or exit区别?
 
-* 经典面试题2
+- 如果跳出多层循环?
+
+
+* 上节进阶
+
+- 字符串
+- 列表
+- 元组
+
+* 字符串
+
+.image imgs/str1.png
+
+.link https://segmentfault.com/a/1190000004598007 [string func]
+
+.link https://zhuanlan.zhihu.com/p/37316452 [string format]
+
+
+* 列表
+
+* 列表定义
+
+.image imgs/list1.png
+
+
+* 列表方法
+.image imgs/list2.png _ 430
+
+
+
+* 元组
+
+.image imgs/tuple1.png
+
+
+
+
+* 经典面试题
 .background imgs/bg.png
 
 * 示例1
@@ -65,17 +100,27 @@ http://github.com/zhengyscn
 * 定义
 .background imgs/bg.png
 
-.code -edit scripts/d1.py
+    - 字典是另一种可变容器模型，可存储任意类型对象
+    - 字典的每个键值(key=>value)对用冒号(:)分割，每个对之间用逗号(,)分割，整个字典包括在花括号({})中
+    - 键必须是唯一的，但值则不必
+    - 值可以是任意数据类型
+    - 键必须是不可变的，例如：数字、字符串、元组可以，但列表就不行
+    - 如果用字典里没有的键访问数据，会报错
+    - 字典的元素没有顺序，不能通过下标引用元素，通过键来引用
+    - 字典内部存放的顺序和 key 放入的顺序是没有关系的
 
 * 操作
 .background imgs/bg.png
 
-- 通过key 使用数据项，读取，修改、删除
-- len(dict)
-- for k in dict:	#对k的遍历
-- 字典是无序的 反而列表时有序的
 
-   
+- 定义字典
+- 访问字典
+- 修改字典
+- 删除字典
+- 字典函数
+- 字典方法
+- 字典推导式
+
 
 * 示例
 .background imgs/bg.png
@@ -124,9 +169,35 @@ http://github.com/zhengyscn
 
 
 
-* 异常处理
+* 错误和异常
 .background imgs/bg.png
 
+- 语法错误
+- 异常
+
+
+* 语法错误
+
+    SyntaxError 类表示语法错误;
+    语法错误是无法通过try...except捕获的;
+    
+    >>> print:
+      File "<stdin>", line 1
+        print:
+             ^
+    SyntaxError: invalid syntax    
+
+    
+* 异常
+
+    运行时发生的错误被称为异常；
+    
+    >>> 1 + '0'             
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+        
+    
 * 示例
 .background imgs/bg.png
 .code -edit scripts/except1.py
@@ -145,6 +216,7 @@ http://github.com/zhengyscn
 	- 分页
 	- 持久化
 	- 异常处理
+    - 导出csv
 
 - Ngx日志分析
 
