@@ -37,12 +37,14 @@ http://github.com/zhengyscn
 
 
 * 上节进阶
+.background imgs/bg.png
 
 - 字符串
 - 列表
 - 元组
 
 * 字符串
+.background imgs/bg.png
 
 .image imgs/str1.png
 
@@ -52,18 +54,22 @@ http://github.com/zhengyscn
 
 
 * 列表
+.background imgs/bg.png
 
 * 列表定义
+.background imgs/bg.png
 
 .image imgs/list1.png
 
 
 * 列表方法
+.background imgs/bg.png
 .image imgs/list2.png _ 430
 
 
 
 * 元组
+.background imgs/bg.png
 
 .image imgs/tuple1.png
 
@@ -178,6 +184,7 @@ http://github.com/zhengyscn
 
 
 * 语法错误
+.background imgs/bg.png
 
     SyntaxError 类表示语法错误;
     语法错误是无法通过try...except捕获的;
@@ -190,6 +197,7 @@ http://github.com/zhengyscn
 
     
 * 异常
+.background imgs/bg.png
 
     运行时发生的错误被称为异常；
     
