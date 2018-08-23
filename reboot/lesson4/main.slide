@@ -1,0 +1,278 @@
+Lesson4
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+- 函数式编程
+- 装饰器
+- 模块
+- Q&A
+
+
+
+* 回顾
+.background imgs/bg.png
+
+- 为什么要序列化？
+
+- 序列化和反序列化
+    - json、pickle(cPickle)
+    - json vs pickle
+
+
+
+* 函数
+.background imgs/bg.png
+
+- 内置函数
+
+- 自定义函数
+
+
+
+* 内置函数
+.background imgs/bg.png
+    - print
+    - input
+    - type
+    - len
+    - max
+    - min
+    - range
+    ...
+
+
+
+
+* 自定义函数
+.background imgs/bg.png
+- 定义
+- 语法
+- 参数
+- 示例
+- 练习
+
+
+
+
+
+* 定义
+.background imgs/bg.png
+    - 以 def 关键字开头，后接函数名称和圆括号 ()。
+    - 参数必须放在圆括号内，多个参数之间用逗号分隔。
+    - return [表达式] 结束函数，选择性地返回一个值给调用方。不带表达式的 return 相当于返回 None。
+    - return 可以返回多个值，此时返回的数据未元组类型。
+    - 定义参数时，带默认值的参数必须在无默认值参数的后面。
+
+- 函数三要素：
+    1. 函数名
+    2. 函数参数
+    3. 返回值
+
+
+* 语法
+.background imgs/bg.png
+.code -edit scripts/func_syntax.py
+
+
+
+* 示例1
+.background imgs/bg.png
+.code -edit scripts/f1.py    
+    
+* 示例2
+.background imgs/bg.png
+.code -edit scripts/f2.py   
+    
+    
+* 参数
+.background imgs/bg.png
+- 位置参数
+- 关键字参数
+- 默认参数
+- 可变参数
+    
+
+* 位置参数
+.background imgs/bg.png
+.code -edit scripts/f5.py
+
+- 结论：
+
+    参数是通过其位置进行匹配的，从左往右，而且必须精确的传递和参数头部参数名一样多的参数；
+
+
+* 关键字参数
+.background imgs/bg.png
+.code -edit scripts/f7.py
+
+- 结论：
+
+    在调用函数时， 能够更详尽的定义内容传递的位置，关键字参数允许通过变量名进行匹配，而不是通过位置
+
+* 示例
+.background imgs/bg.png
+- 位置参数 和 关键字参数 混合使用
+.code -edit scripts/f11.py
+
+
+* 默认参数
+.background imgs/bg.png
+.code -edit scripts/f8.py
+
+- 结论：
+
+    默认参数允许创建函数可选择的参数，如果没有传入值的话，在函数运行前，参数就被赋予了默认值；
+
+
+* 示例
+.background imgs/bg.png
+- 关键字参数 和 默认参数 混合使用
+.code -edit scripts/f12.py
+
+
+
+
+
+* 可变参数
+.background imgs/bg.png
+- 定义时，使用*和**进行任意数目参数收集；
+- 调用时，使用*和**进行参数解包；
+
+
+
+* 可变参数 ☞ 定义时
+.background imgs/bg.png
+- 定义时，使用*和**进行任意数目参数收集；
+
+.code -edit scripts/f13.py
+.code -edit scripts/f14.py
+
+- 结论：
+
+    符号 *
+    用元组的形式收集不匹配的位置参数；当这个函数调用时，python将所有的位置相关的参数收集到一个新的元组中，
+    并将这个元素赋值给变量args
+
+    符号 **
+    它只对关键字参数有效，在这种情况下，**允许将关键字参数转化为字典，你能够在之后使用键调用来进行或字典迭代；
+
+
+* 示例
+.background imgs/bg.png
+- 混合方式
+.code -edit scripts/f15.py
+
+- 分析
+
+    在这个列子中，1按位置传给x， 2和3收集到args位置的元组中，x和y放入到kwargs关键字字典中；
+
+
+
+* 可变参数 ☞ 调用时
+.background imgs/bg.png
+- 调用时，使用*和**进行参数解包；
+
+.code -edit scripts/f16.py
+.code -edit scripts/f17.py
+
+
+* 示例
+.background imgs/bg.png
+- 混合方式
+.code -edit scripts/f18.py
+
+- 结论：
+    1. 函数调用的时候把形参关键字上面
+    2. 默认参数一定要放在位置参数后面
+
+
+* 练习    
+.background imgs/bg.png
+- 登录验证
+    1. 函数名为authentication
+    2. 参数username和password2个参数；
+    3. 验证username=admin并且password=51reboot，如果验证成功返回True，否则返回False。
+
+- 持久化
+.code -edit scripts/presenttence1.py
+
+    
+* 匿名函数   
+.background imgs/bg.png
+- 定义
+
+- 语法
+
+- 示例
+
+- 练习
+
+
+ 
+* 定义
+.background imgs/bg.png
+    - lambda 来创建匿名函数；
+    - lambda 只是一个表达式，函数体比 def 简单很多；
+    - lambda 的主体是一个表达式，而不是一个代码块。仅仅能在 lambda 表达式中封装有限的逻辑进去；
+ 
+ 
+* 语法    
+.background imgs/bg.png
+    lambda [arg1 [,arg2,.....argn]]:expression
+
+ 
+* 示例
+.background imgs/bg.png
+.link https://github.com/467754239/python/blob/master/basic/function_program.md lambda
+
+- 排序
+    >>> dic = {'a' : 2, 'b' : 1, 'c' : 3}
+    >>> sorted(dic.items(), key=lambda x:x[1])
+
+    >>> help(sorted)
+    Signature: sorted(iterable, /, *, key=None, reverse=False)
+    Docstring:
+    Return a new list containing all items from the iterable in ascending order.
+
+    A custom key function can be supplied to customize the sort order, and the
+    reverse flag can be set to request the result in descending order.
+
+
+ 
+
+* 装饰器
+.background imgs/bg.png
+- 是什么？link
+- 解决了什么问题？
+- 语法
+
+.link https://github.com/467754239/python/blob/master/basic/decorate.md decorate
+
+
+* 模块
+.background imgs/bg.png
+- csv
+
+.link https://github.com/467754239/python/blob/master/builtin_module/csv.md [csv 示例]
+
+* 作业
+.background imgs/bg.png
+
+- 用户管理系统V3
+    - 函数
+    - 导出csv
+
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
