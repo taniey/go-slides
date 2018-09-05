@@ -1,0 +1,140 @@
+Lesson6
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+- 细说闭包、装饰器
+- 模块
+- 包和模块理论
+- 容器、可迭代对象、迭代器、生成器
+- Q&A
+
+
+
+* 回顾
+.background imgs/bg.png
+
+- 上节学习回顾
+- 作业
+
+
+
+* 细说闭包、装饰器
+.background imgs/bg.png
+
+* 模块
+.background imgs/bg.png
+
+- csv
+- ConfigParser
+- requests
+- logging
+- hashlib
+- requests
+- psutil
+
+* 包和模块
+.background imgs/bg.png
+
+- 模块和包
+- 模块导入的几种方式
+
+* 模块和包
+.background imgs/bg.png
+- 什么是模块
+    - 一个.py文件就称为一个模块(module);
+
+- 模块和函数的关系
+    - 一对多，一个模块中可以有多个函数；
+
+- 模块解决了什么问题？
+    - 大家回忆我们的命令行用户管理作业，一个文件中至少存在10个函数，一个文件中起码有200+行代码，这样的代码组织方式，
+    给人的第一印象就是看起来很累，不知道哪是入口函数，因为没有明确的标识，代码是给人看的，写代码和和xx 第一印象非常重要；
+    解决办法就是：为了编写可维护的代码，我们需要按功能划分，分别放到不同文件里；
+
+- 什么是包？
+    如果一个目录下有__init__.py文件，我们就称这个目录为包；__init__.py是包的一个标识，必须要有；
+
+- 包解决了什么问题？
+    不同的人编写的模块名相同怎么办？
+    避免模块名冲突，引入了按目录来组织模块的方法，称为包；这样即使有相同的模块名，但是因为包名不同，也不会造成重复；
+
+
+* 模块导入的几种方式
+.background imgs/bg.png
+- 规范的导入方式
+
+- 非规范、不建议的导入方式
+
+- 相对导入
+
+- 循环导入
+
+
+* 规范的导入方式
+.background imgs/bg.png
+- import
+.code -edit scripts/pkg1.py
+
+.code -edit scripts/pkg2.py
+
+- from
+
+.code -edit scripts/pkg3.py
+
+
+* 非规范、不建议的导入方式
+.background imgs/bg.png
+.code -edit scripts/pkg4.py
+
+.code -edit scripts/pkg5.py
+
+
+* 相对导入
+.background imgs/bg.png
+
+* 循环导入
+.background imgs/bg.png
+- 如果你创建两个模块，二者相互导入对方，那么就会出现循环导入。
+
+.code -edit scripts/to2/f1.py
+.code -edit scripts/to2/f2.py
+
+* 容器、可迭代对象、迭代器、生成器
+.background imgs/bg.png
+
+* 容器
+
+* 可迭代对象
+
+* 迭代器
+
+* 生成器
+
+
+* 作业
+.background imgs/bg.png
+
+- 用户管理系统 v4
+
+    - 支持github登录认证
+    - 支持配置文件管理方式
+    - 支持导出Excel
+    - 模块拆分
+
+- 主机基础信息采集
+
+    - hostname、private_ip, public_ip, cpu、mem、disk、manufacturer、real_datetime、os
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
