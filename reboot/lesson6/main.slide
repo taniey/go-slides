@@ -8,7 +8,7 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 回顾
-- 细说装饰器
+- 细说闭包、装饰器
 - 包和模块理论
 - 模块
 - 容器、可迭代对象、迭代器、生成器
@@ -24,7 +24,7 @@ http://github.com/zhengyscn
 
 
 
-* 细说装饰器
+* 细说闭包、装饰器
 .background imgs/bg.png
 
 * 闭包
