@@ -9,8 +9,8 @@ http://github.com/zhengyscn
 
 - 回顾
 - 细说闭包、装饰器
-- 模块
 - 包和模块理论
+- 模块
 - 容器、可迭代对象、迭代器、生成器
 - Q&A
 
@@ -27,16 +27,52 @@ http://github.com/zhengyscn
 * 细说闭包、装饰器
 .background imgs/bg.png
 
+* 闭包
+.background imgs/bg.png
+
+- 变量的分类
+
+    - 全局变量
+    - 局部变量
+
+    - Nonlocal variable
+    是相对于某个函数来说的，指的是这个函数所调用的在本函数作用域之外的变量
+
+- 函数
+
+    - 嵌套函数(Nested function)
+    指的被定义在一个函数(outer enclosing function)中的函数,这个nested function可以调用包围它的作用域中的变量。
+
+* 示例
+
+.code -edit scripts/closure1.py
+
+.code -edit scripts/closure2.py
+
+.code -edit scripts/closure3.py
+
+
+
+
+
+
+
+
+
+
+* 装饰器
+.background imgs/bg.png
+
 * 模块
 .background imgs/bg.png
 
+- logginpsutilg
 - csv
 - ConfigParser
 - requests
-- logging
 - hashlib
-- requests
-- psutil
+- jinja2
+-
 
 * 包和模块
 .background imgs/bg.png
