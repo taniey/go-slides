@@ -8,7 +8,7 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 回顾
-- 细说闭包、装饰器
+- 细说装饰器
 - 包和模块理论
 - 模块
 - 容器、可迭代对象、迭代器、生成器
@@ -24,7 +24,7 @@ http://github.com/zhengyscn
 
 
 
-* 细说闭包、装饰器
+* 细说装饰器
 .background imgs/bg.png
 
 * 闭包
@@ -63,16 +63,7 @@ http://github.com/zhengyscn
 * 装饰器
 .background imgs/bg.png
 
-* 模块
-.background imgs/bg.png
 
-- logginpsutilg
-- csv
-- ConfigParser
-- requests
-- hashlib
-- jinja2
--
 
 * 包和模块
 .background imgs/bg.png
@@ -141,16 +132,63 @@ http://github.com/zhengyscn
 .code -edit scripts/to2/f1.py
 .code -edit scripts/to2/f2.py
 
+
+
+* 模块
+.background imgs/bg.png
+
+- logging
+- psutil
+- csv
+- ConfigParser
+- requests
+- hashlib
+
+
+
 * 容器、可迭代对象、迭代器、生成器
 .background imgs/bg.png
 
 * 容器
 
+    - [not] in
+
 * 可迭代对象
+
+- 定义
+    凡是返回一个迭代器的对象都可以称为可迭代对象；
+    它并不是指某种具体的数据类型。
+- 语法
+    >>> iter？
+    Docstring:
+    iter(iterable) -> iterator
+- 列举常见有哪些？
+- fd ?
+
+- 结论：
+    1. 实现了__iter__方法。
 
 * 迭代器
 
+- 定义
+    1. 任何`同时`实现了__iter__和__next__方法的对象都是迭代器
+    2. __iter__返回迭代器自身，__next__返回容器中的下一个值，如果容器中没有更多元素了，则抛出StopIteration异常。
+    注意：
+        迭代器是一种带状态的的对象。
+
+* 练习
+
+- range函数是可迭代对象 还是 迭代器？
+
+
 * 生成器
+
+- 生成器是Python最吸引人的特性之一；
+- 生成器是一种特殊的迭代器；
+
+- 生成器 和 迭代器的区别？
+    1. 生成器一定是迭代器， 但迭代器不一定是生成器；
+    2. 迭代器要同时实现__iter__ 和 __next__ 方法， 但生成器只需要一个yield关键字即可；
 
 
 * 作业
