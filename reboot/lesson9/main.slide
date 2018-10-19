@@ -1,0 +1,61 @@
+Lesson9
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+
+- 深、浅拷贝
+
+- Django
+
+
+* 回顾
+.background imgs/bg.png
+
+- jquery ajax get
+
+
+
+* 深、浅拷贝
+
+
+
+* Django
+
+- 介绍
+
+- 安装
+
+- mvc
+
+- 最小示例
+
+- 模板
+
+- model
+
+- admin
+
+
+
+* 作业
+.background imgs/bg.png
+
+- 用户登录
+
+    - 请求方式 POST；
+    - 基于github的用户名和密码认证；
+    - 认证成功时，跳转到命令执行页面；否则 提示失败，停留在当前页面；
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
