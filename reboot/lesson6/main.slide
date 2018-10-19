@@ -8,10 +8,11 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 回顾
-- 细说闭包、装饰器
+- 细说装饰器
 - 包和模块理论
 - 模块
 - 容器、可迭代对象、迭代器、生成器
+- 数据库
 - Q&A
 
 
@@ -24,45 +25,8 @@ http://github.com/zhengyscn
 
 
 
-* 细说闭包、装饰器
+* 细说装饰器
 .background imgs/bg.png
-
-* 闭包
-.background imgs/bg.png
-
-- 变量的分类
-
-    - 全局变量
-    - 局部变量
-
-    - Nonlocal variable
-    是相对于某个函数来说的，指的是这个函数所调用的在本函数作用域之外的变量
-
-- 函数
-
-    - 嵌套函数(Nested function)
-    指的被定义在一个函数(outer enclosing function)中的函数,这个nested function可以调用包围它的作用域中的变量。
-
-* 示例
-
-.code -edit scripts/closure1.py
-
-.code -edit scripts/closure2.py
-
-.code -edit scripts/closure3.py
-
-
-
-
-
-
-
-
-
-
-* 装饰器
-.background imgs/bg.png
-
 
 
 * 包和模块
@@ -150,11 +114,11 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 * 容器
-
+.background imgs/bg.png
     - [not] in
 
 * 可迭代对象
-
+.background imgs/bg.png
 - 定义
     凡是返回一个迭代器的对象都可以称为可迭代对象；
     它并不是指某种具体的数据类型。
@@ -169,7 +133,7 @@ http://github.com/zhengyscn
     1. 实现了__iter__方法。
 
 * 迭代器
-
+.background imgs/bg.png
 - 定义
     1. 任何`同时`实现了__iter__和__next__方法的对象都是迭代器
     2. __iter__返回迭代器自身，__next__返回容器中的下一个值，如果容器中没有更多元素了，则抛出StopIteration异常。
@@ -177,18 +141,61 @@ http://github.com/zhengyscn
         迭代器是一种带状态的的对象。
 
 * 练习
-
+.background imgs/bg.png
 - range函数是可迭代对象 还是 迭代器？
 
 
 * 生成器
-
+.background imgs/bg.png
 - 生成器是Python最吸引人的特性之一；
 - 生成器是一种特殊的迭代器；
 
 - 生成器 和 迭代器的区别？
     1. 生成器一定是迭代器， 但迭代器不一定是生成器；
     2. 迭代器要同时实现__iter__ 和 __next__ 方法， 但生成器只需要一个yield关键字即可；
+
+
+* 数据库
+.background imgs/bg.png
+- 数据库种类
+- MySQL的基本操作
+- Python操作常见的MySQL驱动
+- PyMySQL驱动
+
+* 数据库种类
+.background imgs/bg.png
+- Oracle
+- MySql、MariaDB
+- Redis
+- MongoDB
+- Sql Server
+- Sqlite
+- Influxdb
+- ...
+
+* MySQL的基本操作
+.background imgs/bg.png
+- 增、删、该、查
+
+
+* Python操作常见的MySQL驱动
+.background imgs/bg.png
+- MySQL-python (Python2.x)
+- PyMySQL (3.x, 兼容MySQL-python)
+- SQLAlchemy (既支持原生 SQL，又支持 ORM 的工具)
+
+
+* PyMySQL驱动
+.background imgs/bg.png
+- 安装
+    pip install pymysql
+
+- 使用
+
+    - 连接
+    - 插入
+    - 查询
+    - 更新
 
 
 * 作业
@@ -199,7 +206,7 @@ http://github.com/zhengyscn
     - 支持github登录认证
     - 支持配置文件管理方式
     - 支持导出Excel
-    - 模块拆分
+    - 存储方式改成MySQL
 
 - 主机基础信息采集
 
