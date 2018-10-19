@@ -1,0 +1,65 @@
+Lesson8
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+
+- Bootstrap
+
+- JavaScript
+
+- AdminLTE
+
+
+
+* 回顾
+.background imgs/bg.png
+
+
+
+* Bootstrap
+.background imgs/bg.png
+
+.link https://v3.bootcss.com
+
+
+
+* JavaScript
+.background imgs/bg.png
+
+
+* AdminLTE
+.background imgs/bg.png
+
+.link https://github.com/almasaeed2010/AdminLTE (AdminLTE for github)
+
+.link https://github.com/almasaeed2010/AdminLTE/releases (AdminLTE download)
+
+
+
+* 作业
+.background imgs/bg.png
+
+- 页面用户认证
+
+    - 输入用户名和密码
+    - 验证用户名和密码，如果验证通过则返回登录成功，否则返回登录失败。
+
+
+- 页面命令执行
+
+    - 在页面的文本框中输入命令，返回命令的执行结果。
+
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
