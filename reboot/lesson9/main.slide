@@ -9,7 +9,11 @@ http://github.com/zhengyscn
 
 - 回顾
 
-- 深、浅拷贝
+- Virutalenv介绍及使用
+
+- pip的介绍及使用
+
+- Bootstrap和jQuery练习
 
 - Django
 
@@ -17,40 +21,58 @@ http://github.com/zhengyscn
 * 回顾
 .background imgs/bg.png
 
-- jquery ajax get
+- Bootstrap
+
+- jQuery
 
 
-
-* 深、浅拷贝
-
+* Bootstrap和jQuery练习
+.background imgs/bg.png
 
 
 * Django
+.background imgs/bg.png
 
-- 介绍
+- Django介绍
 
-- 安装
+- Django安装
 
-- mvc
+- Django mvc
 
-- 最小示例
+- 工程项目 和 应用
 
-- 模板
+- 最小示例(hello world)
+
+- 命令执行 传递参数
+
+- osi七层模型及HTTP协议
+
+- 前端代码和后端代码混用及分离
 
 - model
 
-- admin
+- orm
 
+
+
+* 官方文档
+
+.link https://baike.baidu.com/item/django/61531 Django 百度百科
+
+.link https://docs.djangoproject.com/en/1.11/ Django 1.11 英文
+
+.link https://yiyibooks.cn/xx/Django_1.11.6/index.html Django 1.11 中文
 
 
 * 作业
 .background imgs/bg.png
 
-- 用户登录
+- 用户管理
 
-    - 请求方式 POST；
-    - 基于github的用户名和密码认证；
-    - 认证成功时，跳转到命令执行页面；否则 提示失败，停留在当前页面；
+    - 增加
+    - 删除
+    - 修改
+    - 搜索
 
 
 * Q&A
