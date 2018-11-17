@@ -1,0 +1,82 @@
+Django 相册管理
+51reboot 2018-11-22
+
+Monkey
+zhengyscn@gmail.com
+https://github.com/zhengyscn
+
+
+* 大纲
+.background slide/bg.png
+
+- 简介
+
+- 依赖
+
+- 效果图
+
+- 演示
+
+- Q&A
+
+
+* 简介
+.background slide/bg.png
+
+- 如何把手机里的图片分享给自已的好朋友呢？
+
+- 为了更好的对自已旅游图进行管理， 基于django框架实现了相册上传、展示等功能；
+
+
+* 依赖
+.background slide/bg.png
+
+- Python 3.x
+
+- Django 1.11
+
+- Pymysql 0.9.2
+
+- Pillow 5.3.0
+ 
+ 
+
+* 效果图
+.background slide/bg.png
+
+* 全览
+.background slide/bg.png
+
+.image slide/all.png _ 1000
+
+* 大图
+.background slide/bg.png
+
+.image slide/simple.png _ 1000
+
+* 小图
+.background slide/bg.png
+
+.image slide/little.png _ 330
+
+
+* 上传图片
+.background slide/bg.png
+
+.image slide/admin-upload.png _ 500
+
+
+
+* 演示
+.background slide/bg.png
+
+.link http://127.0.0.1:8080 点击演示
+
+.link http://127.0.0.1:8080/admin 上传图片
+
+
+* Q&A
+.background slide/bg.png
+
+.image slide/51reboot-wechat.png _ 500
+ 
