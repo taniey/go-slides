@@ -23,23 +23,25 @@ https://github.com/zhengyscn
 * 简介
 .background slide/bg.png
 
-- 如何把手机里的图片分享给自已的好朋友呢？
+- 基于Django Web开发框架，来实现图片、相册的快捷管理；
 
-- 为了更好的对自已旅游图进行管理， 基于django框架实现了相册上传、展示等功能；
+- 支持创建相册、上传图片、图片缩放、图片介绍等功能；
 
 
 * 依赖
 .background slide/bg.png
 
-- Python 3.x
+- Python 3.6.4
 
 - Django 1.11
 
 - Pymysql 0.9.2
 
 - Pillow 5.3.0
- 
- 
+
+    1. PIL (Python Imaging Library); Python2.7
+    2. Pillow; Python 3.x
+    3. 图像缩放、切片、旋转、滤镜、输出文字、调色板等一应俱全
 
 * 效果图
 .background slide/bg.png
@@ -66,6 +68,10 @@ https://github.com/zhengyscn
 .image slide/admin-upload.png _ 500
 
 
+* admin及缩略图
+.background slide/bg.png
+
+.image slide/admin_low.png _ 900
 
 * 演示
 .background slide/bg.png
