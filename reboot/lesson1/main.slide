@@ -89,7 +89,8 @@ http://github.com/zhengyscn
 - IDE开发工具：Vim | PyCharm
 
 - 注意：
-    如果是Win系统，建议使用虚拟机Virtualbox + Vagrant； 如果是Mac系统请忽略此项。
+    1. 如果是Win系统，建议使用虚拟机Virtualbox + Vagrant；
+    2. 如果是Mac系统, 请忽略此项。
 
 * 第一个Python程序
 .background imgs/bg.png
