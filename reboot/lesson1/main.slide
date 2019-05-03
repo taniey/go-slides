@@ -85,11 +85,11 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 操作系统   ：CentOS 6.x
-- Python版本 ：3.6.4
+- Python版本 ：3.6.8
 - IDE开发工具：Vim | PyCharm
 
 - 注意：
-    如果是Win系统，建议使用虚拟机，比如Vmware 或 Vagrant；如果是Mac系统请忽略此项。
+    如果是Win系统，建议使用虚拟机Virtualbox + Vagrant； 如果是Mac系统请忽略此项。
 
 * 第一个Python程序
 .background imgs/bg.png
