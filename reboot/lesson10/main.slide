@@ -1,0 +1,88 @@
+Lesson10
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+
+- Django概览
+
+- Django对象
+
+- 模版
+
+
+* Django概览
+
+- 介绍
+
+- 项目目录结构
+
+- 启动服务
+
+- Hello World
+
+
+
+* 介绍
+
+.link https://baike.baidu.com/item/django/61531 Django 百度百科
+
+.link https://docs.djangoproject.com/en/1.11/ Django 1.11 英文
+
+.link https://yiyibooks.cn/xx/Django_1.11.6/index.html Django 1.11 中文
+
+
+* Django项目目录结构
+    (xly1) bash-3.2$ django-admin.py startproject ops
+    (xly1) bash-3.2$ ls
+    ops
+    (xly1) bash-3.2$ tree
+    .
+    └── ops                     // 项目目录
+        ├── manage.py           // 命令行管理工具
+        └── ops
+            ├── __init__.py     // 包管理文件
+            ├── settings.py     // 项目配置文件
+            ├── urls.py         // url配置文件
+            └── wsgi.py         // Web服务器的网关接口（webserver getway interface）
+
+    2 directories, 5 files
+
+
+* Django启动服务
+    (xly1) bash-3.2$ cd ops
+    (xly1) bash-3.2$ python manage.py runserver
+    (xly1) bash-3.2$ python manage.py runserver 0.0.0.0:8000
+
+
+* Django对象
+
+- HttpReques对象
+
+- HttpResponse对象
+
+- JsonResponse对象
+
+
+* 作业
+.background imgs/bg.png
+
+- 用户管理
+
+    - 增加
+    - 删除
+    - 修改
+    - 搜索
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]

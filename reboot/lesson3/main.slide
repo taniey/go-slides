@@ -151,13 +151,14 @@ http://github.com/zhengyscn
 * 示例
 .background imgs/bg.png
 
-- Ngx日志处理
+- Nginx日志处理
 
 
 * 模块
 .background imgs/bg.png
 
 - 标准模块
+	- os 
 	- sys
 	- json
 	- datetime
@@ -221,14 +222,12 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 用户管理系统V2
-	- 数据结构：字典
+	- 数据结构：列表 -> 字典
 	- 分页
 	- 持久化
 	- 异常处理
-    - 导出csv
-
-- Ngx日志分析
-
+	- 优雅的格式化输出
+	- 扩展: 导出csv
 
 
 * Q&A

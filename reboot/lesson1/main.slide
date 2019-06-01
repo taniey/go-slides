@@ -5,9 +5,6 @@ zhengyscn@gmail.com
 http://github.com/zhengyscn
 
 
-* 课程介绍
-.background imgs/bg.png
-
 * 大纲
 .background imgs/bg.png
 - 课程介绍
@@ -16,10 +13,15 @@ http://github.com/zhengyscn
 - 准备环境
 - 第一个Python程序
 - 变量
+- 注释 
 - 数据类型
 - 流程控制
 - 循环
 - Q&A
+
+
+* 课程介绍
+.background imgs/bg.png
 
 
 * Python介绍
@@ -84,7 +86,7 @@ http://github.com/zhengyscn
 * 准备环境
 .background imgs/bg.png
 
-- 操作系统   ：CentOS 6.x
+- 操作系统   ：CentOS 6.x | Mac os
 - Python版本 ：3.6.8
 - IDE开发工具：Vim | PyCharm
 
@@ -127,7 +129,6 @@ http://github.com/zhengyscn
     - 避免和python保留字和关键字冲突
 - 变量名必须先定义在使用
 
-
 * 示例1
 .background imgs/bg.png
 .code -edit -numbers scripts/var.py
@@ -144,6 +145,11 @@ http://github.com/zhengyscn
 	1. 求合计
 
 
+* 注释
+.background imgs/bg.png
+
+- 单行注释
+- 多行注释
 
 
 * 数据类型
@@ -201,7 +207,7 @@ http://github.com/zhengyscn
 	如果分数>= 80, 小于90, 评分是B.
 	如果分数>= 70, 小于80, 评分是C.
 	如果分数>= 60, 小于70, 评分是D.
-	如果分数>= 60, 评分是E.
+	如果分数<  60, 评分是E.
 	输出：your score is <80>, get <B>.
 	
 * 循环

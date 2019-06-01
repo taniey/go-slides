@@ -1,0 +1,158 @@
+Lesson5
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 复习(4天)
+- 字符串
+- 变量生命周期
+- 变量的作用域
+- 必包/装饰器
+- 多线程/多进程
+- 数据库
+- Q&A
+
+* 复习
+
+- 温故而知新
+
+* 字符串
+    .count
+    .format
+    .isdigit
+    .islower
+    .isupper
+    .join
+    .lower
+    .upper
+    .replace
+    .split
+    .startswith
+    .endswith
+    .strip
+
+
+* 变量生命周期
+
+- 示例
+.code -edit scripts/exam_var_left.py
+
+- 总结
+    1. def、class、lambda 改变变量作用域的代码段;
+    2. if/elif/else、try/except/finally、for/while
+
+* 变量的作用域
+
+- 分类
+- LEGB原则
+- 示例
+- 总结
+
+* 分类
+    - 全局（global）：在函数外部定义
+    - 局部（local）：在函数内部定义
+
+* LEGB原则
+    - L （Local） 局部作用域
+    - E （Enclosing function locale） 外部嵌套函数作用域
+    - G （Global module）函数定义所在模块作用域
+    - B （Buildin）内置作用域
+
+    总结：
+    变量由内到外，先找自已作用域的变量，然后上级寻找，仍未找到，则报错。
+
+* 示例
+- 猜一猜， 执行这段代码，是否报错？
+.code -edit scripts/exam_var_legb1.py
+
+
+* 总结
+
+- 没有块级别作用域，代码块的变量，外部可以调用。
+
+
+
+* 必包/装饰器
+
+- 必包
+- 装饰器
+
+* 变量的作用域
+
+
+* 必包概念
+    - 在一个外函数中定义了一个内函数，内函数里运用了外函数的临时变量，并且外函数的返回值是内函数的引用。
+
+* 装饰器
+- 是什么？link
+- 解决了什么问题？
+- 语法
+
+.link https://github.com/467754239/python/blob/master/basic/decorate.md decorate
+
+* 多线程/多进程
+
+- 概念
+- 实战
+
+* 数据库
+.background imgs/bg.png
+- 数据库种类
+- MySQL的基本操作
+- Python操作常见的MySQL驱动
+- PyMySQL驱动
+
+* 数据库种类
+.background imgs/bg.png
+- Oracle
+- MySql、MariaDB
+- Redis
+- MongoDB
+- Sql Server
+- Sqlite
+- Influxdb
+- ...
+
+* MySQL的基本操作
+.background imgs/bg.png
+- 增、删、该、查
+
+
+* Python操作常见的MySQL驱动
+.background imgs/bg.png
+- MySQL-python (Python2.x)
+- PyMySQL (3.x, 兼容MySQL-python)
+- SQLAlchemy (既支持原生 SQL，又支持 ORM 的工具)
+
+
+* PyMySQL驱动
+.background imgs/bg.png
+- 安装
+    pip install pymysql
+
+- 使用
+
+    - 连接
+    - 插入
+    - 查询
+    - 更新
+
+* 作业
+.background imgs/bg.png
+
+- 用户管理系统 v4
+
+    - 支持github登录认证
+    - 支持配置文件管理方式
+    - 存储方式改成MySQL
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]

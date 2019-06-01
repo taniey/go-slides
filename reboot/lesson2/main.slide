@@ -58,6 +58,7 @@ http://github.com/zhengyscn
 		从左往右依次为：0, 1, 2, 3, ..., n-1
 		从右往左依次为：-1, -2, -3, ..., -n
 	4. 访问元素的索引必须存在，否则报错
+	5. 索引取值范围？ 
 	
 
 * 修改
@@ -88,6 +89,14 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 .code -edit scripts/str6.py
+
+- pip3
+
+    - vim /etc/pip.conf
+    - pip3 install ipython
+
+- str.method -> list
+
 	
 * 示例
 .background imgs/bg.png
@@ -228,11 +237,6 @@ http://github.com/zhengyscn
         3.5 搜 find
     3. 格式化输出   
     
-    扩展：
-    1. 分页
-    2. 持久化
-
-
 - 冒泡排序
 	- [3, 7, 2, 5, 20, 11]
 
