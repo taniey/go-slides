@@ -9,21 +9,19 @@ http://github.com/zhengyscn
 
 - 回顾
 
-- Django概览
-
+- Django(hello world版本)
 - Django对象
-
 - 模版
+- Django admin
 
 
-* Django概览
+
+* Django(hello world版本)
 
 - 介绍
-
-- 项目目录结构
-
+- 创建项目及项目目录结构
 - 启动服务
-
+- 创建应用及应用目录结构
 - Hello World
 
 
@@ -37,7 +35,7 @@ http://github.com/zhengyscn
 .link https://yiyibooks.cn/xx/Django_1.11.6/index.html Django 1.11 中文
 
 
-* Django项目目录结构
+* 创建项目及项目目录结构
     (xly1) bash-3.2$ django-admin.py startproject ops
     (xly1) bash-3.2$ ls
     ops
@@ -54,30 +52,90 @@ http://github.com/zhengyscn
     2 directories, 5 files
 
 
-* Django启动服务
+* 启动服务
     (xly1) bash-3.2$ cd ops
     (xly1) bash-3.2$ python manage.py runserver
     (xly1) bash-3.2$ python manage.py runserver 0.0.0.0:8000
 
 
+* 创建应用及应用目录结构
+    (xly1) bash-3.2$ django-admin.py startapp dashboard
+    (xly1) bash-3.2$ tree .
+    .
+    ├── dashboard            // 应用目录
+    │   ├── __init__.py     // 包文件
+    │   ├── admin.py        // admin后台文件
+    │   ├── apps.py
+    │   ├── migrations      // 数据库文件
+    │   │   └── __init__.py
+    │   ├── models.py       // 表
+    │   ├── tests.py        // 单元测试
+    │   └── views.py        // 视图
+    ├── db.sqlite3
+    ├── manage.py
+    └── ops
+        ├── __init__.py
+        ├── settings.py
+        ├── urls.py
+        └── wsgi.py
+
+    3 directories, 13 files
+
+* Hello World
+
+    $ vim dashboard/views.py    // 编写视图
+    from django.http import HttpResponse
+    def hello(request):
+        return HttpResponse("hello world.")
+
+    $ vim ops/settings.py       // 新创建的app添加到配置文件中
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'dashboard',    // 新增一行
+    ]
+
+    $ vim ops/urls.py           // 新增url路由
+    from dashboard.views import hello
+
+    urlpatterns = [
+        url(r'^admin/', admin.site.urls),
+        url(r'^dashboard/', hello), // 新增一行
+    ]
+
+
 * Django对象
 
 - HttpReques对象
+    $ vim dashboard/views.py
+    def hello(request):
+        print("request: ", request)
+        print("dir(request): ", dir(request))   // 打印常用的request方法
+        return HttpResponse("hello world.")
 
 - HttpResponse对象
 
 - JsonResponse对象
 
 
+
+* 模版
+
+
+* Django admin
+
+
+
 * 作业
 .background imgs/bg.png
 
-- 用户管理
+- xxxxxx
 
-    - 增加
-    - 删除
-    - 修改
-    - 搜索
+
 
 
 * Q&A

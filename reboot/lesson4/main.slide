@@ -27,6 +27,7 @@ http://github.com/zhengyscn
 
 
 * 集合set
+.background imgs/bg.png
 
 - 概念
 - 定义
@@ -34,9 +35,11 @@ http://github.com/zhengyscn
 
 
 * 概念
+.background imgs/bg.png
     无序的，不能有重复的元素，也不能排序。
 
 * 定义
+.background imgs/bg.png
     s = set() // new empty set object
     s = set(iterable) // new set object
     s = {1,3,4,6}
@@ -45,6 +48,7 @@ http://github.com/zhengyscn
     - 空集， 不是s = {}，这是空字典！
 
 * 操作
+.background imgs/bg.png
     .add
     .clear
     .pop
@@ -55,20 +59,21 @@ http://github.com/zhengyscn
 
 
 * 内置函数
-
+.background imgs/bg.png
 - sum
 - enumerate | range
 - random
 
 * sum
-
+.background imgs/bg.png
 - 计算1到100的和，包括100
 
 * enumerate | range
+.background imgs/bg.png
 .code -edit scripts/exam_enumerate.py
 
 * random
-
+.background imgs/bg.png
 - 概念
     - 随机数相关的模块
 - 操作
@@ -302,7 +307,7 @@ http://github.com/zhengyscn
     reverse flag can be set to request the result in descending order.
 
 * 文件
-
+.background imgs/bg.png
 - 操作
     .write
     .read

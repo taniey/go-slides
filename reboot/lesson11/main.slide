@@ -1,0 +1,39 @@
+Lesson11
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+
+- Django日志配置
+
+- Django分页插件
+
+- Django的ORM
+
+- Django 多对一
+
+- Django 多对多
+
+- Django 一对一
+
+
+
+* Django的ORM
+
+- 创建对象
+- 查询对象
+- 删除对象
+- 修改对象
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
