@@ -66,8 +66,11 @@
 - 退出
 
 ## 第七天
-> Django basic  
+> Django  
+- basic
+- admin
 
 
 ## 第八天
-> Django Admin
+> Django  
+- orm
