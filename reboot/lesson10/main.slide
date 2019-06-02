@@ -118,17 +118,60 @@ http://github.com/zhengyscn
         return HttpResponse("hello world.")
 
 - HttpResponse对象
+    # 传递一个字符串作为页面的内容到 HttpResponse 构造函数
+    def __init__(self, content_type=None, status=None, reason=None, charset=None):
+        pass
+
+    content_type: application/json | text/plain
+    status: 200
 
 - JsonResponse对象
+    class JsonResponse(HttpResponse):
+        def __init__(self, data, encoder=DjangoJSONEncoder, safe=True,
+                        json_dumps_params=None, **kwargs):
 
+
+* 示例
+    def hello(request):
+        print("request: ", request)
+        print("dir(request): ", dir(request))
+        return HttpResponse("hello world.")
+
+    def helloJson(request):
+        dic = {
+            'name' : '51reboot',
+            'address' : 'beijing',
+        }
+        content = json.dump(dic)
+        return HttpResponse(content, content_type="application/json")
+        # return JsonResponse(dic)
+
+    def helloDic(request):
+        dic = list(range(10))
+        return JsonResponse(dic, safe=False)
+
+* 练习
+
+- 传递请求参数，求和
+    Method： Get
+    Uri: /sum?arg1=2&arg2=3
+    Response: 5
+
+- 执行命令，返回命令执行结果
+    Method： Get
+    Uri: /command?cmd=df
+    Response: 5
 
 
 * 模版
 
+- render
 
 * Django admin
 
-
+- 创建超级用户/修改密码
+- 创建用户管理系统表
+- 通过admin来管理数据
 
 * 作业
 .background imgs/bg.png
