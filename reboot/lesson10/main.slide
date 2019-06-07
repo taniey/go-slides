@@ -8,15 +8,16 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 回顾
-
 - Django(hello world版本)
 - Django对象
 - 模版
 - Django admin
+- Q&A
 
 
 
 * Django(hello world版本)
+.background imgs/bg.png
 
 - 介绍
 - 创建项目及项目目录结构
@@ -27,6 +28,7 @@ http://github.com/zhengyscn
 
 
 * 介绍
+.background imgs/bg.png
 
 .link https://baike.baidu.com/item/django/61531 Django 百度百科
 
@@ -36,6 +38,7 @@ http://github.com/zhengyscn
 
 
 * 创建项目及项目目录结构
+.background imgs/bg.png
     (xly1) bash-3.2$ django-admin.py startproject ops
     (xly1) bash-3.2$ ls
     ops
@@ -53,12 +56,14 @@ http://github.com/zhengyscn
 
 
 * 启动服务
+.background imgs/bg.png
     (xly1) bash-3.2$ cd ops
     (xly1) bash-3.2$ python manage.py runserver
     (xly1) bash-3.2$ python manage.py runserver 0.0.0.0:8000
 
 
 * 创建应用及应用目录结构
+.background imgs/bg.png
     (xly1) bash-3.2$ django-admin.py startapp dashboard
     (xly1) bash-3.2$ tree .
     .
@@ -82,7 +87,7 @@ http://github.com/zhengyscn
     3 directories, 13 files
 
 * Hello World
-
+.background imgs/bg.png
     $ vim dashboard/views.py    // 编写视图
     from django.http import HttpResponse
     def hello(request):
@@ -109,7 +114,7 @@ http://github.com/zhengyscn
 
 
 * Django对象
-
+.background imgs/bg.png
 - HttpReques对象
     $ vim dashboard/views.py
     def hello(request):
@@ -132,6 +137,7 @@ http://github.com/zhengyscn
 
 
 * 示例
+.background imgs/bg.png
     def hello(request):
         print("request: ", request)
         print("dir(request): ", dir(request))
@@ -151,7 +157,7 @@ http://github.com/zhengyscn
         return JsonResponse(dic, safe=False)
 
 * 练习
-
+.background imgs/bg.png
 - 传递请求参数，求和
     Method： Get
     Uri: /sum?arg1=2&arg2=3
@@ -164,19 +170,100 @@ http://github.com/zhengyscn
 
 
 * 模版
-
+.background imgs/bg.png
 - render
 
+    return render(request, "login.html", context={"username" : "xxx"})
+
 * Django admin
+.background imgs/bg.png
 
 - 创建超级用户/修改密码
+
 - 创建用户管理系统表
-- 通过admin来管理数据
+
+- 配置admin
+
+- admin后台
+
+* 创建超级用户/修改密码
+.background imgs/bg.png
+    - 方式1
+    -- 创建用户
+    (xly1) bash-3.2$ python manage.py createsuperuser
+    Username (leave blank to use 'zhengyansheng'): monkey
+    Email address: monkey@51reboot.com
+    Password:
+    Password (again):
+    Superuser created successfully.
+
+
+
+* 创建用户管理系统表
+.background imgs/bg.png
+    class Users(models.Model):
+        username    =   models.CharField(max_length=32, unique=True, verbose_name="用户名")
+        age         =   models.IntegerField(verbose_name="年龄")
+        phone       =   models.CharField(max_length=11, unique=True, verbose_name="手机号")
+        address     =   models.TextField(blank=True, verbose_name="地址")
+        # create_time and update_time只读的， 不允许admin修改.
+        create_time =   models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
+        update_time =   models.DateTimeField(auto_now=True, verbose_name="更新时间")
+
+        class Meta:
+            db_table = "users"
+            verbose_name = '用户表'
+            verbose_name_plural = '用户表'
+            ordering = ['update_time', ]
+
+        def __str__(self):
+            return self.username
+
+- 同步表结构
+    python manage.py makemigrations     // 同步models到数本地据库文件
+    python manage.py migrate            // 同步数据库文件到数据库中
+
+
+* 配置admin
+.background imgs/bg.png
+    from .models import Users
+
+    class UsersAdmin(admin.ModelAdmin):
+        # listdisplay设置要显示在列表中的字段（id字段是Django模型的默认主键）
+        list_display = ['username', 'age', 'phone', 'address', 'create_time', 'update_time']
+
+        # 搜索字段
+        search_fields = ['username', 'phone']
+
+        # 过滤字段
+        list_filter = ['username', 'phone']
+
+        # ordering设置默认排序字段，负号表示降序排序
+        ordering = ['-update_time', 'create_time']
+
+        # list_per_page设置每页显示多少条记录，默认是100条
+        list_per_page = 2
+
+    admin.site.register(Users, UsersAdmin)
+
+    # 不需要同步数据库，重启立即生效.
+
+* admin后台
+
+    http://localhost:8000/admin
 
 * 作业
 .background imgs/bg.png
 
-- xxxxxx
+- 用户管理系统
+    ## 通过curl 或者 Postman的方式实现以下功能
+
+    - 增
+    - 删
+    - 改
+    - 查
+    - 分
+
 
 
 
