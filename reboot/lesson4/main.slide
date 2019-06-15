@@ -25,6 +25,9 @@ http://github.com/zhengyscn
     - json、pickle(cPickle)
     - json vs pickle
 
+- json 和 pickle对比
+    JSON只能处理基本数据类型。pickle能处理所有Python的数据类型。
+    JSON用于各种语言之间的字符转换。pickle用于Python程序对象的持久化或者Python程序间对象网络传输，
 
 * 集合set
 .background imgs/bg.png
@@ -36,15 +39,23 @@ http://github.com/zhengyscn
 
 * 概念
 .background imgs/bg.png
-    无序的，不能有重复的元素，也不能排序。
+    1. 无序的
+    2. 不能有重复的元素
+    3. 不能排序
+    4. 可以修改集合本身，但集合中包含的元素必须是不可边类型
 
 * 定义
 .background imgs/bg.png
+- 创建集合有两种方式
+
+- 方式1
     s = set() // new empty set object
     s = set(iterable) // new set object
+
+- 方式2
     s = {1,3,4,6}
 
-    注意：
+    # 注意事项：
     - 空集， 不是s = {}，这是空字典！
 
 * 操作
@@ -155,10 +166,15 @@ http://github.com/zhengyscn
     
 * 参数
 .background imgs/bg.png
-- 位置参数
-- 关键字参数
-- 默认参数
-- 可变参数
+
+- 函数调用时，传递参数的方式有两种
+    - 位置参数 （positionalargument）
+    - 关键字参数 （keyword argument）
+
+
+- 函数定义时，参数的定义方式有两种
+    - 默认参数
+    - 可变参数
     
 
 * 位置参数

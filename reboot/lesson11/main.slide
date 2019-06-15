@@ -9,26 +9,180 @@ http://github.com/zhengyscn
 
 - 回顾
 
-- Django日志配置
+- 路由
 
-- Django分页插件
+- 日志
 
-- Django的ORM
+- 分页
 
-- Django 多对一
+- ORM
 
-- Django 多对多
+- 一对多
 
-- Django 一对一
+- 多对多
+
+- 一对一
+
+- Q&A
 
 
+* 回顾
 
-* Django的ORM
 
+* 路由
+
+- URLconf
+
+- urlpatterns
+
+- url参数
+
+
+* URLconf
+    URLconf是一个python模块，是一个URL模块（简单正则表达式）到python函数（视图）之间的映射。
+
+* urlpatterns
+    1. urlpatterns是一个url()实例类型的python列表。
+    2. urlpatterns中每个正则表达式在第一次访问它们时被编译。
+
+* url函数
+    语法: url(regex, view, kwargs=None, name=None)
+    示例: url(r'^hello/', helloView, name='hello')
+    regex: 一个字符串（原始字符串） 或 简单的正则表达式;
+    view: 视图函数 或 类;
+    kwargs: 传递额外的参数给视图;
+    name: url名称; 名称和url的映射, 用在前后端没分离场景中.
+
+* url参数
+
+- url参数 位置参数
+- url参数 关键字参数
+- url参数 额外参数
+
+* url参数 位置参数
+- 语法
+    (pattern)
+
+    - pattern是一个正则表达式，也是位置参数的值.
+
+- 示例
+    url(r'^books/2019/', bookView, name='book')
+    url(r'^books/([0-9]{4})/$', bookView, name='book')
+    url(r'^books/([0-9]{4})/([0-9]{2})/([0-9]+)$', bookYearMonthDayView, name='book')
+
+    请求地址:   /books/2019/06/15
+    调用函数:   views.bookYearMonthDayView(request, '2019', '06', '15')
+
+
+* url参数 关键字参数
+
+- 语法
+    (?P<name>pattern)
+
+    - name是传递给视图的名字
+    - pattern是一个正则表达式，也是关键字参数的值.
+
+- 示例
+
+    url(r'^books/(?P<year>[0-9]{4})/$', bookYearView, name='book_year')
+    url(r'^books/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/$', bookYearMonthView, name='book_year_month')
+    url(r'^books/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/(?P<day>[0-9]+)/$',
+                                                    bookYearMonthDayView, name='book_year_month_day')
+
+
+    请求地址:   /books/2019/06/15
+    调用函数:   views.bookYearMonthDayView(request, year='2019', month='06', day='15')
+
+* url参数 额外参数
+
+- URLconfs 具有一个钩子，让你传递一个Python字典作为额外的参数给视图函数
+- django.conf.urls.url() 函数可以接收一个可选的第三个参数, 它是一个字典，表示想要传递给视图函数的额外关键字参数
+
+- 示例
+    url(r'^books/(?P<year>[0-9]{4})/$', bookYearView, {'name' : '51reboot'}, name='book_year')
+
+    请求地址:   /books/2019/
+    调用函数:   views.bookYearView(request, year='2019', name='51reboot')
+
+* 日志
+
+- Django 使用Python内置的logging模块打印日志，Python的logging配置由4部分组成
+
+    - 记录器 logger
+    - 处理程序 Handler
+    - 过滤器 Filter
+    - 格式化 Formatter
+
+
+* 分页
+
+- Install
+    $ pip install dj-pagination
+
+- Configure
+    https://dj-pagination.readthedocs.io/en/latest/
+
+
+* ORM
+
+- 介绍
+- 基本常用操作
+- 总结
+
+* ORM介绍
+
+    ORM: Object-Relational Mappin (对象关系映射)
+
+    它的作用是在关系型数据库和业务实体对象之间作一个映射，这样，
+    我们在具体的操作业务对象的时候,就不需要再去和复杂的SQL语句打交道，只需简单的操作对象的属性和方法。
+
+* ORM基本操作
 - 创建对象
+    (xly1) bash-3.2$ python manage.py shell
+    >>> from users.models import Users
+    >>> Users.objects.create(username="", age=20, address="", phone="")
+
 - 查询对象
+    >>> Users.objects.get(username="monkey")
+    >>> Users.objects.filter(username="monkey")
+
 - 删除对象
+    >>> obj = Users.objects.get(username="monkey")
+    >>> obj.delete()
+
 - 修改对象
+    >>> obj = Users.objects.get(username="monkey")
+    >>> obj.age= 25
+    >>> obj.save()
+
+* 总结
+
+* xxx
+    https://www.cnblogs.com/pythonxiaohu/p/5814247.html
+
+    https://www.cnblogs.com/xuchunlin/articles/5872929.html
+
+* 一对多
+    models.ForeignKey
+
+* 多对多
+    models.ManyToManyField
+
+* 一对一
+    models.OneToOneField
+
+
+* 作业
+.background imgs/bg.png
+
+- 用户管理系统
+    ## 通过curl 或 Postman的方式实现以下功能
+
+    - 增
+    - 删
+    - 改
+    - 查
+    - 分
 
 
 * Q&A

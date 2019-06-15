@@ -12,6 +12,7 @@ http://github.com/zhengyscn
 - Django对象
 - 模版
 - Django admin
+- User admin
 - Q&A
 
 
@@ -20,6 +21,7 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 介绍
+- 安装
 - 创建项目及项目目录结构
 - 启动服务
 - 创建应用及应用目录结构
@@ -36,6 +38,10 @@ http://github.com/zhengyscn
 
 .link https://yiyibooks.cn/xx/Django_1.11.6/index.html Django 1.11 中文
 
+
+* 安装
+
+    $ pip install django==1.11
 
 * 创建项目及项目目录结构
 .background imgs/bg.png
@@ -156,6 +162,22 @@ http://github.com/zhengyscn
         dic = list(range(10))
         return JsonResponse(dic, safe=False)
 
+
+* QueryDict对象
+
+    在 HttpRequest 对象中，GET 和 POST 属性得到的都是 django.http.QueryDict 所创建的实例。
+    这是一个 django 自定义的类似字典的类，用来处理同一个键带多个值的情况。
+
+    在 python 原始字典中，当一个键出现多个值的时候会发生冲突，只保留最后一个值。
+    而在 HTTL 表单中，通常会发生一个键有多个值的情况，例如 <select multiple> （多选框）就是一个很常见的情况。
+
+    request.POST 和 request.GET 的 QueryDict 在一个正常的请求/响应过程中是不可变的。
+    若要获得可变的版本，需要使用 copy() 方法。
+
+    参考：
+    https://www.jianshu.com/p/be25373eb5eb
+
+
 * 练习
 .background imgs/bg.png
 - 传递请求参数，求和
@@ -171,16 +193,25 @@ http://github.com/zhengyscn
 
 * 模版
 .background imgs/bg.png
-- render
 
+- render
     return render(request, "login.html", context={"username" : "xxx"})
+
+    # 注意， 参数类型
+    第一个参数是request
+    第二个参数是静态html文件
+    第三个参数是后端传递给html文件的参数
 
 * Django admin
 .background imgs/bg.png
 
 - 创建超级用户/修改密码
 
-- 创建用户管理系统表
+- 配置Django数据库
+
+- 同步数据库
+
+- User Models
 
 - 配置admin
 
@@ -188,19 +219,37 @@ http://github.com/zhengyscn
 
 * 创建超级用户/修改密码
 .background imgs/bg.png
-    - 方式1
-    -- 创建用户
-    (xly1) bash-3.2$ python manage.py createsuperuser
-    Username (leave blank to use 'zhengyansheng'): monkey
-    Email address: monkey@51reboot.com
-    Password:
-    Password (again):
-    Superuser created successfully.
+
+- 切换到项目目录
+    $ cd ops
+
+- 创建用户
+    $ python manage.py createsuperuser
+    or
+    $ python manage.py createsuperuser --username=monkey1 --email=monkey1@51reboot.com
+
+- 修改密码
+    $ python manage.py changepassword monkey
 
 
+* 配置Django数据库
+    $ vim ops/settings.py   # 默认是sqlite3数据库， 切换到mysql数据库
 
-* 创建用户管理系统表
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'ops',
+            'USER': '51reboot',
+            'PASSWORD': '',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        },
+    }
+
+
+* User Models
 .background imgs/bg.png
+
     class Users(models.Model):
         username    =   models.CharField(max_length=32, unique=True, verbose_name="用户名")
         age         =   models.IntegerField(verbose_name="年龄")
@@ -219,10 +268,22 @@ http://github.com/zhengyscn
         def __str__(self):
             return self.username
 
-- 同步表结构
-    python manage.py makemigrations     // 同步models到数本地据库文件
-    python manage.py migrate            // 同步数据库文件到数据库中
 
+* 同步数据库
+    // 查看现有的迁移文件的状态，是否同步到数据库中
+    $ python manage.py showmigrations
+
+    //打印迁移文件内容
+    $ python manage.py sqlmigrate sessions 0001_initial
+
+    // 同步models到数本地据库文件
+    $ python manage.py makemigrations
+
+    // 同步数据库文件里的sql预计到数据库执行
+    $ python manage.py migrate
+
+    // 直接连接上关联的数据库
+    $ python manage.py dbshell
 
 * 配置admin
 .background imgs/bg.png
@@ -252,17 +313,10 @@ http://github.com/zhengyscn
 
     http://localhost:8000/admin
 
-* 作业
-.background imgs/bg.png
 
-- 用户管理系统
-    ## 通过curl 或者 Postman的方式实现以下功能
 
-    - 增
-    - 删
-    - 改
-    - 查
-    - 分
+
+
 
 
 
