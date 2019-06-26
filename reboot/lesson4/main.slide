@@ -71,17 +71,17 @@ http://github.com/zhengyscn
 
 * 内置函数
 .background imgs/bg.png
-- sum
 - enumerate | range
+- sum
 - random
-
-* sum
-.background imgs/bg.png
-- 计算1到100的和，包括100
 
 * enumerate | range
 .background imgs/bg.png
 .code -edit scripts/exam_enumerate.py
+
+* sum
+.background imgs/bg.png
+- 计算1到100的和，包括100
 
 * random
 .background imgs/bg.png
@@ -113,12 +113,6 @@ http://github.com/zhengyscn
     - len
     - max
     - min
-    - range
-    - time
-    - os    // 获取/user/local下每个文件的大小
-    - datetime
-    - logging
-    ...
 
 
 
@@ -325,15 +319,21 @@ http://github.com/zhengyscn
 * 文件
 .background imgs/bg.png
 - 操作
-    .write
-    .read
-    .readline
-    .readlines
-    .fileno
-    .tell
-    .seek
+    .write          // 写文件
+    .read           // 读取文件到内存， 可以指定读取文件的大小
+    .readline       // 读取文件的一行
+    .readlines      // 全部读取文件，返回列表，列表的每个元素都都是文件的一行数据.
+    .fileno         // 返回一个整型(int)的文件描述符号
+    .tell           // 返回文件指针的当前位置
+    .seek           // 用于移动文件读取指针到指定位置
 
-.link https://github.com/zhengyscn/python-doc/tree/master/tail - 学习tailf简易版
+
+    .seek(offset[, whence])
+
+
+.link https://github.com/467754239/python/blob/master/basic/context_manager.md - 文件上下文管理器with
+
+.link https://github.com/zhengyscn/python-doc/tree/master/tail - 简易版tailf
 
 
 * 作业

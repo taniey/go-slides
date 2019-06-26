@@ -8,7 +8,6 @@ http://github.com/zhengyscn
 .background imgs/bg.png
 
 - 回顾
-- Jinja2
 - HTML
 - CSS
 - Q&A
@@ -20,19 +19,6 @@ http://github.com/zhengyscn
 
 - 上节学习回顾
 - 作业
-
-- 遗留问题(lesson6 ppt)
-
-    1. 装饰器
-    2. 容器、可迭代对象、迭代器、生成器
-    3. 作业模块化
-
-
-* Jinja2
-.background imgs/bg.png
-
-.link http://docs.jinkan.org/docs/jinja2/ 中文文档
-
 
 * HTML
 .background imgs/bg.png

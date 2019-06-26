@@ -7,112 +7,102 @@ http://github.com/zhengyscn
 * 大纲
 .background imgs/bg.png
 
-- 复习
-- 字符串
-- 赋值/深拷贝/浅拷贝
-- 变量生命周期
-- 变量的作用域
-- 必包/装饰器
-- 多线程/多进程
+- 回顾
+- 包和模块介绍
+- 常用模块
 - 数据库
 - Q&A
 
-* 复习
-
-- 复习前四天视频知识点
-
-* 字符串
-    .count
-    .format
-    .isdigit
-    .islower
-    .isupper
-    .join
-    .lower
-    .upper
-    .replace
-    .split
-    .startswith
-    .endswith
-    .strip
 
 
-* 赋值/深拷贝/浅拷贝
-
-- 赋值
-
-    赋值是将某一数值 或 对象赋给某个变量的过程
-    - 基本数据类型： 赋值，赋值之后两个变量互不影响;
-    - 引用数据类型： 赋址，两个变量具有相同的引用，指向同一个对象，相互之间影响;
-
-- 深拷贝/浅拷贝
-
-* 变量生命周期
-
-- 什么是生命周期
-    - 当创建一个对象时，会自动分配一个内存地址给这个对象使用，这就是生命周期的开始;
-    - 当不使用这个对象时，就会回收这个对象，并释放对象所占用的内存地址，这就是对象的消亡;
-
-- 示例
-.code -edit scripts/exam_var_left.py
-
-- 总结
-    1. def、class、lambda 改变变量作用域的代码段;
-    2. if/elif/else、try/except/finally、for/while
-
-* 变量的作用域
-
-- 分类
-- LEGB原则
-- 示例
-- 总结
-
-* 分类
-    - 全局（global）：在函数外部定义
-    - 局部（local）：在函数内部定义
-
-* LEGB原则
-    - L （Local） 局部作用域
-    - E （Enclosing function locale） 外部嵌套函数作用域
-    - G （Global module）函数定义所在模块作用域
-    - B （Buildin）内置作用域
-
-    总结：
-    变量由内到外，先找自已作用域的变量，然后上级寻找，仍未找到，则报错。
-
-* 示例
-- 猜一猜， 执行这段代码，是否报错？
-.code -edit scripts/exam_var_legb1.py
+* 回顾
+.background imgs/bg.png
 
 
-* 总结
+* 包和模块介绍
+.background imgs/bg.png
 
-- 没有块级别作用域，代码块的变量，外部可以调用。
+- 模块和包
+- 模块导入的几种方式
+
+* 模块和包
+.background imgs/bg.png
+- 什么是模块
+    - 一个.py文件就称为一个模块(module);
+
+- 模块和函数的关系
+    - 一对多，一个模块中可以有多个函数；
+
+- 模块解决了什么问题？
+    - 大家回忆我们的命令行用户管理作业，一个文件中至少存在10个函数，一个文件中起码有200+行代码，这样的代码组织方式，
+    给人的第一印象就是看起来很累，不知道哪是入口函数，因为没有明确的标识，代码是给人看的，写代码和和xx 第一印象非常重要；
+    解决办法就是：为了编写可维护的代码，我们需要按功能划分，分别放到不同文件里；
+
+- 什么是包？
+    如果一个目录下有__init__.py文件，我们就称这个目录为包；__init__.py是包的一个标识，必须要有；
+
+- 包解决了什么问题？
+    不同的人编写的模块名相同怎么办？
+    避免模块名冲突，引入了按目录来组织模块的方法，称为包；这样即使有相同的模块名，但是因为包名不同，也不会造成重复；
+
+
+* 模块导入的几种方式
+.background imgs/bg.png
+- 规范的导入方式
+
+- 非规范、不建议的导入方式
+
+- 相对导入
+
+- 循环导入
+
+
+* 规范的导入方式
+.background imgs/bg.png
+- import
+.code -edit scripts/pkg1.py
+
+.code -edit scripts/pkg2.py
+
+- from
+
+.code -edit scripts/pkg3.py
+
+
+* 非规范、不建议的导入方式
+.background imgs/bg.png
+.code -edit scripts/pkg4.py
+
+.code -edit scripts/pkg5.py
+
+
+* 相对导入
+.background imgs/bg.png
+
+* 循环导入
+.background imgs/bg.png
+- 如果你创建两个模块，二者相互导入对方，那么就会出现循环导入。
+
+.code -edit scripts/to2/f1.py
+.code -edit scripts/to2/f2.py
 
 
 
-* 必包/装饰器
+* 模块
+.background imgs/bg.png
 
-- 必包
-- 装饰器
-
-* 变量的作用域
-
-
-* 必包概念
-    - 在一个外函数中定义了一个内函数，内函数里运用了外函数的临时变量，并且外函数的返回值是内函数的引用。
-
-* 装饰器
-- 是什么？link
-- 解决了什么问题？
-- 语法
-
-.link https://github.com/467754239/python/blob/master/basic/decorate.md decorate
-
-* 多线程/多进程
-
-- 概念
-- 实战
+- os
+- time
+- range
+- datetime
+- logging
+- shlex
+- subprocess
+- logging
+- psutil
+- ConfigParser
+- requests
+- hashlib
 
 * 数据库
 .background imgs/bg.png
@@ -161,9 +151,13 @@ http://github.com/zhengyscn
 
 - 用户管理系统 v4
 
-    - 支持github登录认证
     - 支持配置文件管理方式
-    - 存储方式改成MySQL
+    - 存储方式 由文件 改成 数据库
+
+- 主机基础信息采集
+
+    - hostname、private_ip, public_ip, cpu、mem、disk、manufacturer、real_datetime、os
+
 
 * Q&A
 .background imgs/bg.png
