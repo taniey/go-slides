@@ -1,0 +1,206 @@
+Lesson6
+Monkey by 51reboot
+
+zhengyscn@gmail.com
+http://github.com/zhengyscn
+
+* 大纲
+.background imgs/bg.png
+
+- 回顾
+- 面向对象概念
+- 面向对象语法
+- 面向对象示例
+
+- Q&A
+
+
+* 面向对象概念
+.background imgs/bg.png
+
+- 面向对象是什么
+- 面向对象的基本思想
+- 类是什么
+- 类的特性
+
+* 面向对象是什么
+.background imgs/bg.png
+
+    1. 面向对象是程序设计的一种范式
+    2. 面向对象对现实世界建立的对象模型
+
+* 面向对象的基本思想
+.background imgs/bg.png
+
+    - 类 和 对象
+    类 是定义数据的抽象类型
+    对象 是类的实例化的产物
+
+    通俗的来说：
+    人 就是一个类
+    程序员 就是类的一个对象
+
+* 类是什么
+.background imgs/bg.png
+
+    属性 和 功能 组成一个类
+
+
+* 类的特性
+.background imgs/bg.png
+
+- 封装
+- 继承
+- 多态
+
+
+* 封装
+.background imgs/bg.png
+
+    属性
+        性别/年龄/身高/......
+    功能/封装
+        学python/上班挣钱/喝酒撸串/......
+
+* 继承
+.background imgs/bg.png
+
+- 单继承
+
+- 多继承
+
+- 继承模型
+    程序员（父类）
+        前端程序员
+        后端程序员
+            python程序员
+                足球迷
+                    球迷python程序员
+            go程序员
+            nodejs程序员
+
+* 多态
+.background imgs/bg.png
+
+    一个类继承了多个不同的类，调用同一方法会有不同的反应
+
+
+
+
+
+
+* 定义
+
+- 语法
+    class ClassName(Base1, Base2, Base3): # default: object
+        statement...
+
+- 创建类的对象
+    # 一般不需要人为干预, 由父类实现.(返回一个类的出始对象)
+    def __new__(cls):
+        pass
+
+- 构造函数
+    # 定义类的属性， 初始化对象
+    def __init__(self, [...]):
+        pass
+
+- 析构函数
+    # 销毁一个对象时调用的，在被python的垃圾回收时调用的。
+    def __del__(self, [...]):
+        pass
+
+
+* 属性的访问控制
+
+   1. Public/Private(Go)
+   2. Python其实没有访问控制，没有提供私有属性的功能。
+   3. 完全依靠Python规范和命名规则进行约束.
+
+
+* 定义类的方法
+
+    函数和方法的区别？
+    - 函数 可以直接调用函数名
+    - 方法 必须和对象结合起来使用， 方法是类的一部分
+
+    @classmethod
+        调用的时候用类名，而不是某个对象
+    @property
+        像访问属性一样调用方法
+
+* 内建函数
+    dir         获取对象的方法
+    type        获取对象的类型
+    isinstance  判断是否为父类
+    issubclass  判断是否为子类
+
+
+* 类和运算符
+.background imgs/bg.png
+
+- 介绍
+- 示例
+
+* 介绍
+.background imgs/bg.png
+
+- 比较运算符
+    __cmp__(self, other)        # 包含所有的比较情况
+    __eq__(self, other)         # 单一比较，等于
+    __lt__(self, other)         # 单一比较，小于
+    __gt__(self, other)         # 单一比较，大于
+
+- 数字运算
+    __add__(self, other)
+    __sub__(self, other)
+    __mul__(self, other)
+    __div__(self, other)
+
+- 逻辑运算符
+    __or__(self, other)
+    __and__(self, other)
+
+* 示例
+.background imgs/bg.png
+
+.code -edit scripts/oop5.py
+
+
+
+* 类的展现
+.background imgs/bg.png
+
+- 介绍
+- 示例
+
+* 介绍
+.background imgs/bg.png
+
+- 对象转换成字符串
+    __str__         # 供人识别/查看
+    __repr__        # 供机器识别
+    __unicode__     # 另外一种编码
+
+- 展现对象属性
+
+    __dir__         # 暴漏那些可用的方法
+
+* 示例
+.background imgs/bg.png
+
+.code -edit scripts/oop6.py
+
+
+
+
+
+
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]

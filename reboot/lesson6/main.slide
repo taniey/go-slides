@@ -14,9 +14,8 @@ http://github.com/zhengyscn
 - 变量生命周期
 - 变量的作用域
 - 闭包/装饰器
-- 多线程/多进程
 - 可迭代对象、迭代器、生成器
-- 面向对象
+- 多线程/多进程
 - Q&A
 
 * 回顾
@@ -69,56 +68,69 @@ http://github.com/zhengyscn
 * 赋值/浅拷贝/深拷贝
 .background imgs/bg.png
 
-- 赋值
-- 浅拷贝
-- 深拷贝
-- 扩展
-
-* 赋值
-
-- 例子1
-.code -edit scripts/exam_list_append-1.py
-
-- 例子2
-.code -edit scripts/exam_list_append-2.py
-
-- 总结
-    - 从例子1中的执行结果来看，变量赋值只是对地址的引用，而非拷贝；
-    - 从例子2中的执行结果来看，值相等不一定地址相同。
-
-    变量： 其实就是一个标签，是对内存中对象的引用，赋值操作只是给变量一个指向对象的引用。
-
-
-* 浅拷贝
-.code -edit scripts/exam_list_copy.py
-
-* 深拷贝
-.code -edit scripts/exam_list_deecopy.py
-
-* 扩展
-
-    函数的参数传递以及返回值 都是靠 引用传递的
-
-* 总结
+- 一文胜千言
     https://blog.csdn.net/colourful_sky/article/details/81263998
+
 
 * 变量生命周期
 .background imgs/bg.png
 
 - 什么是生命周期
 - 全局/局部的生命周期
-- 示例
 
 * 什么是生命周期
     - 所谓生命周期就是变量从被创建到被系统回收的过程
 
 * 全局/局部的生命周期
-    - 局部变量的生命周期
+
+- 全局变量生命周期
+    1. 程序运行时开始创建，程序退出时销毁
+
+- 局部变量的生命周期
     1. 局部变量在函数执行时才被创建，函数执行结束后局部变量被系统回收
     2. 局部变量在生命周期内，可以用来存储函数内部临时使用的数据
 
-    - 全局变量生命周期
-    1. 程序运行时开始创建，程序退出时销毁
+
+* 变量的作用域
+.background imgs/bg.png
+
+- 介绍
+- 分类
+- LEGB法则
+- 示例
+- global/nolocal
+- 总结
+
+* 介绍
+    在Python程序中创建、改变、查找变量名时，都是在一个保存变量名的空间中进行，我们称之为命名空间，也被称之为作用域。
+
+* 分类
+.background imgs/bg.png
+    - 全局（global）：在函数外部定义
+    - 局部（local）：在函数内部定义
+
+* LEGB法则
+.background imgs/bg.png
+    - L （Local） 局部作用域
+    - E （Enclosing function locale） 嵌套作用域
+    - G （Global module）全局作用域
+    - B （Buildin）内置作用域
+
+    总结：
+    1. 搜索变量名的优先级：局部作用域 > 嵌套作用域 > 全局作用域 > 内置作用域
+    2. 变量由内到外，先找自已作用域的变量，然后上级寻找，仍未找到，则报错NameError。
+
+
+* 示例
+.background imgs/bg.png
+.code -edit scripts/exam_var_legb1.py
+
+* global/nolocal
+.background imgs/bg.png
+    https://zhuanlan.zhihu.com/p/32050475
+
+* 总结
+.background imgs/bg.png
 
 * 示例
 .background imgs/bg.png
@@ -127,37 +139,7 @@ http://github.com/zhengyscn
 
 - 总结
     1. def、class、lambda 改变变量作用域的代码段;
-    2. if/elif/else、try/except/finally、for/while
-
-* 变量的作用域
-.background imgs/bg.png
-- 分类
-- LEGB原则
-- 示例
-- 总结
-
-* 分类
-.background imgs/bg.png
-    - 全局（global）：在函数外部定义
-    - 局部（local）：在函数内部定义
-
-* LEGB原则
-.background imgs/bg.png
-    - L （Local） 局部作用域
-    - E （Enclosing function locale） 外部嵌套函数作用域
-    - G （Global module）函数定义所在模块作用域
-    - B （Buildin）内置作用域
-
-    总结：
-    变量由内到外，先找自已作用域的变量，然后上级寻找，仍未找到，则报错。
-
-
-* 示例
-.code -edit scripts/exam_var_legb1.py
-
-* 总结
-.background imgs/bg.png
-- 没有块级别作用域，代码块的变量，外部可以调用。
+    2. 在if-elif-else、for-else、while、try-except\try-finally等关键字的语句块中并不会产成作用域
 
 
 
@@ -178,10 +160,6 @@ http://github.com/zhengyscn
 
 .link https://github.com/467754239/python/blob/master/basic/decorate.md decorate
 
-* 多线程/多进程
-
-- 概念
-- 实战
 
 * 可迭代对象、迭代器、生成器
 .background imgs/bg.png
@@ -223,20 +201,9 @@ http://github.com/zhengyscn
     1. 生成器一定是迭代器， 但迭代器不一定是生成器；
     2. 迭代器要同时实现__iter__ 和 __next__ 方法， 但生成器只需要一个yield关键字即可；
 
+* 多线程/多进程
 
-* 面向对象
-.background imgs/bg.png
-
-    https://www.imooc.com/learn/747
-    https://www.imooc.com/learn/317
-    
-
-* 作业
-.background imgs/bg.png
-
-- 用户管理系统 v5
-
-    1. 函数式 封装成 面向对象；
+.link https://github.com/467754239/python/tree/master/threads 实战
 
 * Q&A
 .background imgs/bg.png
