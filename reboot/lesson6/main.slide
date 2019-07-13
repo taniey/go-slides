@@ -41,6 +41,13 @@ http://github.com/zhengyscn
 
 
 - format格式化
+    :^  # 剧中对齐
+    :<  # 靠左对齐
+    :>  # 靠右对齐
+
+* 示例
+.background imgs/bg.png
+.code -edit scripts/strformat1.py
 
 
 * is/==区别

@@ -9,6 +9,8 @@ http://github.com/zhengyscn
 
 - 回顾
 
+- 模型
+
 - 路由
 
 - 日志
@@ -17,11 +19,7 @@ http://github.com/zhengyscn
 
 - ORM
 
-- 一对多
-
-- 多对多
-
-- 一对一
+- 模型关系
 
 - Q&A
 
@@ -29,7 +27,31 @@ http://github.com/zhengyscn
 * 回顾
 
 
+* 模型
+.background imgs/bg.png
+
+- 模型字段
+    https://docs.djangoproject.com/zh-hans/2.0/ref/models/fields/
+
+
+- 迁移命令
+    - makemigrations
+    根据app下的migrations目录中的记录，检测当前model层代码是否发生变化？
+
+    - migrate
+    把migrations代码转换成sql语句去数据库执行
+
+    - showmigrations
+    负责执行迁移以及撤销和列出迁移的状态
+
+    - sqlmigrate
+    展示迁移的sql语句
+
+    - inspectdb
+    数据库表结构转换成Model
+
 * 路由
+.background imgs/bg.png
 
 - URLconf
 
@@ -39,13 +61,19 @@ http://github.com/zhengyscn
 
 
 * URLconf
+.background imgs/bg.png
+
     URLconf是一个python模块，是一个URL模块（简单正则表达式）到python函数（视图）之间的映射。
 
 * urlpatterns
+.background imgs/bg.png
+
     1. urlpatterns是一个url()实例类型的python列表。
     2. urlpatterns中每个正则表达式在第一次访问它们时被编译。
 
 * url函数
+.background imgs/bg.png
+
     语法: url(regex, view, kwargs=None, name=None)
     示例: url(r'^hello/', helloView, name='hello')
     regex: 一个字符串（原始字符串） 或 简单的正则表达式;
@@ -54,12 +82,15 @@ http://github.com/zhengyscn
     name: url名称; 名称和url的映射, 用在前后端没分离场景中.
 
 * url参数
+.background imgs/bg.png
 
 - url参数 位置参数
 - url参数 关键字参数
 - url参数 额外参数
 
 * url参数 位置参数
+.background imgs/bg.png
+
 - 语法
     (pattern)
 
@@ -75,6 +106,7 @@ http://github.com/zhengyscn
 
 
 * url参数 关键字参数
+.background imgs/bg.png
 
 - 语法
     (?P<name>pattern)
@@ -94,6 +126,7 @@ http://github.com/zhengyscn
     调用函数:   views.bookYearMonthDayView(request, year='2019', month='06', day='15')
 
 * url参数 额外参数
+.background imgs/bg.png
 
 - URLconfs 具有一个钩子，让你传递一个Python字典作为额外的参数给视图函数
 - django.conf.urls.url() 函数可以接收一个可选的第三个参数, 它是一个字典，表示想要传递给视图函数的额外关键字参数
@@ -105,6 +138,7 @@ http://github.com/zhengyscn
     调用函数:   views.bookYearView(request, year='2019', name='51reboot')
 
 * 日志
+.background imgs/bg.png
 
 - Django 使用Python内置的logging模块打印日志，Python的logging配置由4部分组成
 
@@ -115,6 +149,7 @@ http://github.com/zhengyscn
 
 
 * 分页
+.background imgs/bg.png
 
 - Install
     $ pip install dj-pagination
@@ -124,12 +159,14 @@ http://github.com/zhengyscn
 
 
 * ORM
+.background imgs/bg.png
 
 - 介绍
 - 基本常用操作
 - 总结
 
 * ORM介绍
+.background imgs/bg.png
 
     ORM: Object-Relational Mappin (对象关系映射)
 
@@ -137,39 +174,187 @@ http://github.com/zhengyscn
     我们在具体的操作业务对象的时候,就不需要再去和复杂的SQL语句打交道，只需简单的操作对象的属性和方法。
 
 * ORM基本操作
-- 创建对象
-    (xly1) bash-3.2$ python manage.py shell
-    >>> from users.models import Users
-    >>> Users.objects.create(username="", age=20, address="", phone="")
+.background imgs/bg.png
 
-- 查询对象
-    >>> Users.objects.get(username="monkey")
-    >>> Users.objects.filter(username="monkey")
+- 创建
+- 查询
+- 删除
+- 修改
+- 单字段和复杂查询
 
-- 删除对象
+* 创建对象
+.background imgs/bg.png
+
+- 方式1
+    >>> u = Users()
+    >>> u.username = 'monkey1'
+    >>> u.age = 21
+    >>> u.save()
+
+- 方式2
+    >>> Users.objects.create(username="monkey", age=20, address="monkey@51reboot.com", phone="132xxx")
+
+- 方式3：
+    >>> Users.objects.create(**data)
+
+* 查询对象
+.background imgs/bg.png
+
+- 单条记录
+    >>> Users.objects.get(username="monkey", age=20)
+
+- 多条记录
+    >>> Users.objects.filter(age=20)
+
+    >>> Users.objects.exclude(age=20)
+
+- 全部记录
+    >>> Users.objects.all()
+
+* 删除对象
+.background imgs/bg.png
+
     >>> obj = Users.objects.get(username="monkey")
     >>> obj.delete()
 
-- 修改对象
+    >>> Users.objects.filter(age=20).delete()
+
+* 修改对象
+.background imgs/bg.png
+
+- 方式1
     >>> obj = Users.objects.get(username="monkey")
     >>> obj.age= 25
     >>> obj.save()
 
+- 方式2
+    >>> Users.objects.filter(username="monkey").update(**data)
+
+
+* 单字段和复杂查询
+.background imgs/bg.png
+
+    - F 单字段更新
+    - Q 复杂查询
+
 * 总结
+.background imgs/bg.png
 
-* xxx
+- 方法
+    .create
+    .get
+    .filter
+    .exclude
+    .all
+
+- 字段查询/条件
+    __contains
+    __startswitch | __endswitch
+    __lt | __lte
+    __gt | __gte
+    __in
+
+
+- 参考
+    https://www.cnblogs.com/liwenzhou/p/8660826.html
+    https://www.jianshu.com/p/923b89ec18eb
+    https://www.cnblogs.com/linjiqin/archive/2014/07/01/3817954.html
+
+
+* 模型关系
+.background imgs/bg.png
+
+
+- 简介
+    关系数据库的强大体现在表之间的相互关联，Django提供了三种最常见的数据库关系；
+
+
+    - 多对一   many-to-one
+    - 多对多   many-to-many
+    - 一对一   one-to-one
+
+- 参考
+
     https://www.cnblogs.com/pythonxiaohu/p/5814247.html
-
     https://www.cnblogs.com/xuchunlin/articles/5872929.html
 
-* 一对多
+* 多对一
+.background imgs/bg.png
+
+- django是使用django.db.models.ForeignKey定义多对一关系
+- ForeignKey需要一个位置参数来指定本Model关联的Model，ForeignKey关联的Model是一，ForeignKey所在的Model是多。
     models.ForeignKey
+    多对一，将字段定义在多的一端中
+
+* 多对一 示例
+
+- 比如汽车和制造商的例子；
+    class Manufacturer(models.Model):
+        name = models.CharField(max_length=30)
+
+    class Car(models.Model):
+        manufacturer    = models.ForeignKey(Manufacturer)
+        name            = models.CharField(max_length=30)
+
+- 正向查询，ForeignKey所在的模型查询关联的模型
+        car = Car.objects.get(pk=2)
+        car.manufacturer.all()      # 返回一个Manufacturer对象
+
+- 反向查询，ForeignKey指向的模型查询ForeignKey所在的模型
+
+    如果模型有一个ForeignKey，那么ForeignKey所指的模型实例可以通过一个管理器返回前一个有ForeignKey的模型的所有
+    实例。默认情况下，这个管理器的名字为foo_set，其中foo是源模型的小写名称。
+
+    manufacturer = Manufacturer.objects.get(pk=1)
+    manufacturer.car_set.all()    # 返回多个car对象
+
+
+* 处理关联对象的其它方法
+    .add(obj1, obj2, ...)           # 添加一指定的模型对象到关联的对象集中
+    .create(**kwargs)               # 创建一个新的对象将它保存并放在关联的对象集中，返回新创建的对象
+
+    .remove(obj1, obj2, ...)        # 从关联的对象集中删除指定的模型对象
+    .clear()                        # 从关联的对象集中删除所有的对象， 多对多
 
 * 多对多
+.background imgs/bg.png
+
+
+
+- 要实现多对多，就要使用django.db.models.ManyToMany，和ForeignKey一样，它也有一个位置参数，用来指定和它关联的Model
+
+- 如果不仅仅需要知道两个Model之间是多对多关系，还需要知道这两个关系的更多信息，比如User和Group是多对多关系，每个User可以在多个Group里，那么Group里可以有多User
+
     models.ManyToManyField
+    多对多，将字段定义在任意一端中
+
+
+* 处理关联对象的其它方法
+    .add(obj1, obj2, ...)           # 添加一指定的模型对象到关联的对象集中
+    .create(**kwargs)               # 创建一个新的对象将它保存并放在关联的对象集中，返回新创建的对象
+
+    .remove(obj1, obj2, ...)        # 从关联的对象集中删除指定的模型对象
+    .clear()                        # 从关联的对象集中删除所有的对象
 
 * 一对一
+.background imgs/bg.png
+
+- 一对一是通过django.db.models.OneToOneField来实现，被关联的Model会被加上Unique的限制，OneToOneField要一个位置参数，与模型关联的类。
+
+- 当某个对象想扩展自另外一个对象时，最常用的方式就是在这个对象的主键上添加一对一的关系。
+
     models.OneToOneField
+    一对一，将字段定义在任意一端中
+
+
+* 一对一 示例
+.background imgs/bg.png
+
+
+
+    class UserProfile(models.Model):
+        username    = models.Models()
+        user        = models.OneToOneField(User)
 
 
 * 作业
