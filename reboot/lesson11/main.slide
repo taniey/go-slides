@@ -17,11 +17,11 @@ http://github.com/zhengyscn
 
 - 路由
 
-- 日志
-
 - 分页
 
 - ORM
+
+- 日志
 
 - 模型关系
 
@@ -186,16 +186,6 @@ http://github.com/zhengyscn
     请求地址:   /books/2019/
     调用函数:   views.bookYearView(request, year='2019', name='51reboot')
 
-* 日志
-.background imgs/bg.png
-
-- Django 使用Python内置的logging模块打印日志，Python的logging配置由4部分组成
-
-    - 记录器 logger
-    - 处理程序 Handler
-    - 过滤器 Filter
-    - 格式化 Formatter
-
 
 * 分页
 .background imgs/bg.png
@@ -309,6 +299,16 @@ http://github.com/zhengyscn
     https://www.jianshu.com/p/923b89ec18eb
     https://www.cnblogs.com/linjiqin/archive/2014/07/01/3817954.html
 
+
+* 日志
+.background imgs/bg.png
+
+- Django 使用Python内置的logging模块打印日志，Python的logging配置由4部分组成
+
+    - 记录器 logger
+    - 处理程序 Handler
+    - 过滤器 Filter
+    - 格式化 Formatter
 
 * 模型关系
 .background imgs/bg.png
