@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/linux,django,python,pycharm
 
+### template ###
+*.md.temp
+
 ### Django ###
 *.log
 *.pot
