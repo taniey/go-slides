@@ -21,5 +21,5 @@ go get -u golang.org/x/tools/cmd/present
 
 ## Usage
 ```bash
-http://talks.godoc.org/github.com/zhengyscn/go-slides/cloud/main.slide
+http://talks.godoc.org/github.com/taniey/go-slides/cloud/main.slide
 ```
