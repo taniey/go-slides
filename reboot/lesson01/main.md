@@ -42,23 +42,20 @@
 # * 课程介绍 #
 总体大纲
 
-# 一、 Python介绍 #
 
+# 一、 Python介绍 #
   - Python是什么
   - Python特点
   - Python生态系统
   - Python应用场景
 
-
-### * Python是什么 ###
-
+### * Python 是什么 ###
   - Python(蟒蛇) 是一种解释性、编译性、和面向对象的脚本语言。
   - Python 由 Guido van Rossum (吉多·范罗苏姆) 于 1989 年底在荷兰国家数学和计算机科学研究所发明，第一个公开发行版发行于 1991 年。
 
   ![Guido van Rossum](imgs/guido.png)
 
 ### * Python特点 ###
-
   - 易于学习
   - 易于阅读
   - 易于维护
@@ -80,7 +77,6 @@
 	> 黑洞照片处理程序
 
 ### * Python应用场景 ###
-
 - **Web开发**
     * Flask
     * Django
@@ -102,7 +98,6 @@
 
 
 # 二、 准备环境 #
-
 - 操作系统   ：CentOS 6.x | Mac os | windows
 - Python版本 ：3.7.4
 - IDE开发工具： PyCharm | eclipse + pydev | emacs | vim
@@ -111,8 +106,8 @@
      windows 安装需要添加环境变量，
      退出：linux: ctrl+D , windows: ctrl+Z
 
-# 三、 第一个Python程序 #
 
+# 三、 第一个Python程序 #
 - **环境**
    1. 交互式环境(使用场景 python)
    2. 脚本方式
@@ -125,21 +120,17 @@
     2. exit(Ctrl + D)  为python交互式环境下的函数指令，用于退出交互式环境。
 
 * **示例1** - 输出
-
    1. 从控制台输出：
-
    ![hello world console](imgs/python-hello1.png)
 
    2. 从文件输出：
-
    ![hello world file](imgs/python-hello2.png)
 
 * **示例2** - 四则运算
-
    ![python calc](imgs/python-jisuan.png)
 
-# 四、 变量 #
 
+# 四、 变量 #
 - 变量命名规则
     - 只能由大小写英文字母、数字、下划线组成
     - 不能以数字开头
@@ -147,9 +138,7 @@
 - 变量名必须先定义在使用
 
 - 示例1 - 变量
-
    * 代码： scripts/var.py
-
     ```python
     name = "hello world !!!"
     print(name)
@@ -164,6 +153,7 @@
     ```
    * 输出：
    ![var result](imgs/var.png)
+
 
 # 五、 接收命令行语句 #
 - **input函数**
@@ -181,7 +171,6 @@
     ![input](imgs/input.png)
 
 - **练习**
-
     * 输入6个数字(整型)
         1. 求合计
 
@@ -203,7 +192,6 @@
 
 
 # 八、 布尔类型运算 #
-
 - **布尔运算**
 
 	1. 或 (A or B：A、B两个只要一个为真则为真)
@@ -243,10 +231,9 @@
    int <--> str <--> float <--> int
 ![type convent](imgs/typeconv.png)
 
+
 # 十、 流程控制 #
-
 - **分支语句**
-
     * 代码规则： scripts/if3.py
     ```  python
     if 表达式1:
@@ -281,24 +268,20 @@
     3. 如果分数>= 70, 小于80, 评分是C.
     4. 如果分数>= 60, 小于70, 评分是D.
     5. 如果分数<  60, 评分是E.
-    + 输出：your score is <80>, get <B\>.
+    + 输出：your score is <80>, get <B\>\.
+
 
 # 十一、 循环  #
-
 - **for循环**
-
   * 代码规则：
-
-  ```python
-for <循环变量> in <循环对象>： <语句1>
-else : <语句2>
-
-  ```
+    ```python
+  for <循环变量> in <循环对象>： <语句1>
+  else : <语句2>
+    ```
 
   注意：else 分支语句可以省略
 
   * 示例一
-
     ```python
 
     s = '1234567890-'
@@ -367,6 +350,7 @@ else : <语句2>
     else:
         print("else case executed , finished")
     ```
+
    * 示例二
     ```python
 
@@ -383,8 +367,8 @@ else : <语句2>
         print(total)
     ```
 
-# 十二、 练习 #
 
+# 十二、 练习 #
 - 输入6个数字(整型)
     1.求合计
 
@@ -394,6 +378,7 @@ else : <语句2>
 - 输入多个数字(整型),直到输入0结束
 	1.求合计
 	2.求最大值
+
 
 # 十三、 作业 #
 
@@ -409,14 +394,13 @@ else : <语句2>
       3. 每次猜时，猜对了，大了，小了
 
   * 提示：生成随机数的方法
-
     ``` python
     import random
     random.randint(0, 100)
     ```
 
-# * Q&A #
 
+# * Q&A #
 <!-- ![Q&A](imgs/qa.png) -->
 
  - taniey by [[https://www.51reboot.com/][51reboot]]
