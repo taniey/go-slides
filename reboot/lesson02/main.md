@@ -1,0 +1,247 @@
+
+
+# 一、 上节回顾 #
+
+- 变量
+- 接收命令行语句
+- 注释
+- 数据类型
+- 布尔类型运算
+- 类型判断-与-转换
+- 流程控制
+- 循环
+- 作业
+   - 打印乘法口诀
+   - 猜数游戏
+
+# * 字符串 #
+
+- 定义
+- 操作
+
+
+* 定义
+.background imgs/bg.png
+
+- 使用单引号、双引号、三个单引号或三个双引号引起来的一些字符
+	name = 'monkey'
+	desc = '51reboot python19'
+
+- 特殊字符
+	\ 	转义符号
+	\n	换行
+	\t	Tab键
+
+
+* 操作
+.background imgs/bg.png
+
+- 访问
+- 修改
+- 遍历
+- 函数
+- 运算
+- 方法
+
+* 访问
+.background imgs/bg.png
+
+.code -edit scripts/str1.py
+
+- 结论：
+	1. 字符串是有序的数据集
+	2. 通过索引方式访问字符串
+	3. 索引编号
+		从左往右依次为：0, 1, 2, 3, ..., n-1
+		从右往左依次为：-1, -2, -3, ..., -n
+	4. 访问元素的索引必须存在，否则报错
+	5. 索引取值范围？
+
+
+* 修改
+.background imgs/bg.png
+
+.code -edit scripts/str2.py
+
+- 结论：
+	1. 字符串不能修改
+
+
+* 遍历
+.background imgs/bg.png
+
+.code -edit scripts/str3.py
+
+* 函数
+.background imgs/bg.png
+
+.code -edit scripts/str4.py
+
+* 运算
+.background imgs/bg.png
+
+.code -edit scripts/str5.py
+
+* 方法
+.background imgs/bg.png
+
+.code -edit scripts/str6.py
+
+- pip3
+
+    - vim /etc/pip.conf
+    - pip3 install ipython
+
+- str.method -> list
+
+
+* 示例
+.background imgs/bg.png
+
+* 练习
+.background imgs/bg.png
+
+- 查找字符串'abcdefabc'中第二个ab的位置
+	提示: help(str.find)
+
+
+
+
+* 列表
+.background imgs/bg.png
+
+- 定义
+- 操作
+- 函数
+- 解析式
+
+
+* List定义
+.background imgs/bg.png
+
+- list是处理一组`有序`项目的数据结构，即你可以在一个列表中存储一个序列的项目
+- 列表是可变类型的数据
+- 列表的组成：用[]表示列表，包含了多个以逗号分隔开的数字或字符串
+
+* 示例
+.background imgs/bg.png
+
+.code -edit scripts/list01.py
+
+- 注意：
+	1. 使用中括号包含
+	2. 每个元素之间使用逗号分隔
+	3. 可包含任意数据类型
+
+
+* List操作
+.background imgs/bg.png
+	取值
+		切片和索引
+		list[]
+	添加
+		list.append()
+		list.insert()
+	删除
+		del(list)
+		list.remove(list[])
+		list.pop()
+	修改
+		list[] = x
+	查找
+		var in list
+	统计
+		list.count()
+	排序
+		list.sort()
+		list.reverse
+		sorted()
+	遍历
+		for . in .
+
+
+* List函数
+.background imgs/bg.png
+
+- len(list)
+- max(list)
+- min(list)
+- list(seq)
+
+
+
+* 示例
+.background imgs/bg.png
+
+
+* 练习
+.background imgs/bg.png
+
+- 打印列表中的最大数字
+	- [5, 12, 32, 4, 2, 10, 25]
+
+
+- 移动列表的最大数字到最后
+	- 原始列表：[5, 12, 32, 4, 2, 10, 25]
+	- 最终列表：[5, 12, 4, 2, 10, 25，32]
+
+	提示：
+	a = 1
+	b = 2
+	a, b = b, a
+
+- 求两个列表中重复的元素的列表
+	- [1, 2, 5, 7, 11]
+	- [2, 15, 3, 7]
+
+
+* 元组
+.background imgs/bg.png
+
+- 元组的定义
+- 元组的操作
+- 元组的应用
+
+
+* 元组的定义
+.background imgs/bg.png
+
+- 元组和列表十分类似，只不过元组和字符串一样是不可变的 即你不能修改元组
+	元组通过()圆括号中用,逗号分割的项目定义
+	元组通常用在使语句或用户定义的函数能够安全地采用一组值的时候，即被使用元组的值不会改变。
+
+- 可以存储一系列值、存储安全性比较高的、不可改变的
+
+- 元组的操作
+	元组和字符串类型一样属于序列类型，可通过索引和切片操作
+	元组值亦不可变
+
+
+
+
+* 作业
+.background imgs/bg.png
+
+- 字符串和列表的方法写中文文档及示例
+
+- 用户管理系统
+    1. 登录认证；
+    2. 增删改查和搜索
+        3.1 增 add
+        3.2 删 delete
+        3.3 改 update
+        3.4 查 list
+        3.5 搜 find
+    3. 格式化输出
+
+- 冒泡排序
+	- [3, 7, 2, 5, 20, 11]
+
+
+
+* Q&A
+.background imgs/bg.png
+
+.image imgs/qa.png
+
+.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
