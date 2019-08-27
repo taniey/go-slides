@@ -1,4 +1,27 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
 
+- [一、 上节回顾](#一-上节回顾)
+- [二、 字符串](#二-字符串)
+    - [-](#-)
+    - [* 操作](#-操作)
+    - [* 访问](#-访问)
+    - [* 修改](#-修改)
+    - [* 遍历](#-遍历)
+    - [* 函数](#-函数)
+    - [* 运算](#-运算)
+    - [* 方法](#-方法)
+- [三、 pip3](#三-pip3)
+- [四、 列表](#四-列表)
+    - [-](#--1)
+    - [* List操作](#-list操作)
+    - [* List函数](#-list函数)
+    - [* 练习](#-练习)
+- [五、 元组](#五-元组)
+    - [-](#--2)
+- [六、 作业](#六-作业)
+
+<!-- markdown-toc end -->
 
 # 一、 上节回顾 #
 
@@ -14,14 +37,11 @@
    - 打印乘法口诀
    - 猜数游戏
 
-# * 字符串 #
-
-- 定义
-- 操作
+# 二、 字符串 #
 
 
-* 定义
-.background imgs/bg.png
+### * 定义 ###
+
 
 - 使用单引号、双引号、三个单引号或三个双引号引起来的一些字符
 	name = 'monkey'
@@ -33,7 +53,8 @@
 	\t	Tab键
 
 
-* 操作
+### * 操作 ###
+
 .background imgs/bg.png
 
 - 访问
@@ -43,7 +64,8 @@
 - 运算
 - 方法
 
-* 访问
+### * 访问 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str1.py
@@ -58,7 +80,8 @@
 	5. 索引取值范围？
 
 
-* 修改
+### * 修改 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str2.py
@@ -67,27 +90,31 @@
 	1. 字符串不能修改
 
 
-* 遍历
+### * 遍历 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str3.py
 
-* 函数
+### * 函数 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str4.py
 
-* 运算
+### * 运算 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str5.py
 
-* 方法
+### * 方法 ###
+
 .background imgs/bg.png
 
 .code -edit scripts/str6.py
 
-- pip3
+# 三、 pip3 #
 
     - vim /etc/pip.conf
     - pip3 install ipython
@@ -105,9 +132,8 @@
 	提示: help(str.find)
 
 
+# 四、 列表 #
 
-
-* 列表
 .background imgs/bg.png
 
 - 定义
@@ -116,7 +142,8 @@
 - 解析式
 
 
-* List定义
+### * List定义 ###
+
 .background imgs/bg.png
 
 - list是处理一组`有序`项目的数据结构，即你可以在一个列表中存储一个序列的项目
@@ -134,7 +161,8 @@
 	3. 可包含任意数据类型
 
 
-* List操作
+### * List操作 ###
+
 .background imgs/bg.png
 	取值
 		切片和索引
@@ -160,7 +188,8 @@
 		for . in .
 
 
-* List函数
+### * List函数 ###
+
 .background imgs/bg.png
 
 - len(list)
@@ -174,7 +203,8 @@
 .background imgs/bg.png
 
 
-* 练习
+### * 练习 ###
+
 .background imgs/bg.png
 
 - 打印列表中的最大数字
@@ -195,16 +225,14 @@
 	- [2, 15, 3, 7]
 
 
-* 元组
-.background imgs/bg.png
+# 五、 元组 #
 
 - 元组的定义
 - 元组的操作
 - 元组的应用
 
 
-* 元组的定义
-.background imgs/bg.png
+### * 元组的定义 ###
 
 - 元组和列表十分类似，只不过元组和字符串一样是不可变的 即你不能修改元组
 	元组通过()圆括号中用,逗号分割的项目定义
@@ -219,8 +247,7 @@
 
 
 
-* 作业
-.background imgs/bg.png
+# 六、 作业 #
 
 - 字符串和列表的方法写中文文档及示例
 
@@ -244,4 +271,4 @@
 
 .image imgs/qa.png
 
-.caption _zhengyscn_ by [[https://www.51reboot.com/][51reboot]]
+.caption _taniey_ by [[https://www.51reboot.com/][51reboot]]
