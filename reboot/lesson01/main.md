@@ -57,7 +57,19 @@
 
 ### * Python特点 ###
   - 易于学习
-  - 易于阅读
+    + 关键字(35个)：
+
+  | x | 1      | 2        | 3       | 4        | 5      |
+  | - | -      | -        | -       | -        | -      |
+  | 1 | False  | await    | else    | import   | pass   |
+  | 2 | None   | break    | except  | in       | raise  |
+  | 3 | True   | class    | finally | is       | return |
+  | 4 | and    | continue | for     | lambda   | try    |
+  | 5 | as     | def      | from    | nonlocal | while  |
+  | 6 | assert | del      | global  | not      | with   |
+  | 7 | async  | elif     | if      | or       | yield  |
+
+  - 易于阅读, 强制使用缩进
   - 易于维护
   - 强大的标准库
   - 面向对象
@@ -105,6 +117,10 @@
 注意：安装成功检测，输出，python, 出现 ```>>>```，提示符，说明成功。
      windows 安装需要添加环境变量，
      退出：linux: ctrl+D , windows: ctrl+Z
+
+- **基本原则**
+   1. python 缩进，以使用空格为荣，以使用tab 为耻
+   2. python
 
 
 # 三、 第一个Python程序 #
@@ -177,6 +193,7 @@
 
 # 六、 注释 #
 - 单行注释
+   * 以 # 开始，并物理行为结束
 - 多行注释
 
 
@@ -268,15 +285,15 @@
     3. 如果分数>= 70, 小于80, 评分是C.
     4. 如果分数>= 60, 小于70, 评分是D.
     5. 如果分数<  60, 评分是E.
-    + 输出：your score is <80>, get <B\>\.
+    + 输出：your score is [80], get [B]\.
 
 
 # 十一、 循环  #
 - **for循环**
   * 代码规则：
     ```python
-  for <循环变量> in <循环对象>： <语句1>
-  else : <语句2>
+    for <循环变量> in <循环对象>： <语句1>
+    else : <语句2>
     ```
 
   注意：else 分支语句可以省略
