@@ -58,17 +58,6 @@
 
 ### * Python特点 ###
   - 易于学习
-    + 关键字(35个)：
-
-  | x | 1      | 2        | 3       | 4        | 5      |
-  | - | -      | -        | -       | -        | -      |
-  | 1 | False  | await    | else    | import   | pass   |
-  | 2 | None   | break    | except  | in       | raise  |
-  | 3 | True   | class    | finally | is       | return |
-  | 4 | and    | continue | for     | lambda   | try    |
-  | 5 | as     | def      | from    | nonlocal | while  |
-  | 6 | assert | del      | global  | not      | with   |
-  | 7 | async  | elif     | if      | or       | yield  |
 
   - 易于阅读, 强制使用缩进
   - 易于维护
@@ -119,11 +108,12 @@
      windows 安装需要添加环境变量，
      退出：linux: ctrl+D , windows: ctrl+Z
 
-# 三、 基本原则 #
+# 三、 基本 信息 #
 
    1. python 缩进
       + 一个逻辑行开头处的空白 (空格符和制表符) 被用来计算该行的缩进等级，以决定语句段落的组织结构。
       + 制表符会被 (从左至右) 替换为一至八个空格，这样缩进的空格总数为八的倍数 (这是为了与 Unix 所用的规则一致)。首个非空白字符之前的空格总数将确定该行的缩进层次。一个缩进不可使用反斜杠进行多行拼接；首个反斜杠之前的空格将确定缩进层次。
+
 
 ```python
 def perm(l):
@@ -149,6 +139,37 @@ for i in range(len(l)):             # error: not indented
             return r                # error: inconsistent dedent
 ```
 
+   2. 关键字(35个)：
+
+  | x | 1      | 2        | 3       | 4        | 5      |
+  | - | -      | -        | -       | -        | -      |
+  | 1 | False  | await    | else    | import   | pass   |
+  | 2 | None   | break    | except  | in       | raise  |
+  | 3 | True   | class    | finally | is       | return |
+  | 4 | and    | continue | for     | lambda   | try    |
+  | 5 | as     | def      | from    | nonlocal | while  |
+  | 6 | assert | del      | global  | not      | with   |
+  | 7 | async  | elif     | if      | or       | yield  |
+
+   3. 运算符
+   以下形符属于运算符:
+```
++       -       *       **      /       //      %      @
+<<      >>      &       |       ^       ~
+<       >       <=      >=      ==      !=
+
+```
+   4. 分隔符
+```
+(       )       [       ]       {       }
+,       :       .       ;       @       =       ->
++=      -=      *=      /=      //=     %=      @=
+&=      |=      ^=      >>=     <<=     **=
+```
+   5. 特殊含意字符
+```
+'       "       #       \
+```
 
 # 四、 第一个Python程序 #
 - **环境**
