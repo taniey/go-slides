@@ -44,18 +44,31 @@
 
 
 - 使用单引号、双引号、三个单引号或三个双引号引起来的一些字符
-	name = 'monkey'
-	desc = '51reboot python19'
-
+```python
+name = 'monkey'
+desc = '51reboot python lesson2'
+text = '''
+        this is the three quote case.
+       '''
+```
 - 特殊字符
-	\ 	转义符号
-	\n	换行
-	\t	Tab键
+   + 反斜杠 (\\) 用来对特殊含义的字符进行转义，例如换行，反斜杠本身或是引号等字符。
+- 前缀
+   + 包括，
+      * 字符串： r, u, R, U, f, F, fr, Fr, fR, FR, rf, rF, Rf, RF
+      * 字节串： b, B, br, Br, bR, BR, rb, Rb, rB, RB
 
+   + 字符串和字节串字面值都可以带有前缀 'r' 或 'R'；这种字符串被称为 原始字符串 其中的反斜杠会被当作其本身的字面字符来处理
+   + 字节串字面值总是带有前缀 'b' 或 'B'；它们生成 bytes 类型而非 str 类型的实例。它们只能包含 ASCII 字符；字节对应数值在128及以上必须以转义形式来表示。
+   + 字符串和字节串字面值都可以带有前缀 'r' 或 'R'；这种字符串被称为 原始字符串 其中的反斜杠会被当作其本身的字面字符来处理。因此在原始字符串字面值中，'\U' 和 '\u' 转义形式不会被特殊对待。
+   + 包含 'f' 或 'F' 前缀的字符串字面值称为 格式化字符串字面值；
+   + 'f' 可与 'r' 连用，但不能与 'b' 或 'u' 连用，因此存在原始格式化字符串，但不存在格式化字节串字面值。
+   + 在三引号字面值中，允许存在未经转义的换行和引号 (并原样保留)，除非是未经转义的连续三引号，这标示着字面值的结束。 ("引号" 是用来标示字面值的字符，即 ' 或 "。)
 
+- 格式化字符串
+
+<!--
 ### * 操作 ###
-
-.background imgs/bg.png
 
 - 访问
 - 修改
@@ -63,60 +76,89 @@
 - 函数
 - 运算
 - 方法
+-->
 
 ### * 访问 ###
+- 单元素访问
+```
+>>> desc = '51reboot python 22'
+>>> desc[0]
+'5'
+>>> desc[1]
+'1'
+>>> desc[-1]
+'9'
+>>> desc[100]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
 
-.background imgs/bg.png
-
-.code -edit scripts/str1.py
+```
 
 - 结论：
-	1. 字符串是有序的数据集
-	2. 通过索引方式访问字符串
-	3. 索引编号
-		从左往右依次为：0, 1, 2, 3, ..., n-1
-		从右往左依次为：-1, -2, -3, ..., -n
-	4. 访问元素的索引必须存在，否则报错
-	5. 索引取值范围？
-
+    1. 字符串是有序的数据集
+    2. 通过索引方式访问字符串
+    3. 索引编号
+       + 从左往右依次为：0, 1, 2, 3, ..., n-1
+       + 从右往左依次为：-1, -2, -3, ..., -n
+    4. 访问元素的索引必须存在，否则报错
+    5. 索引取值范围？
 
 ### * 修改 ###
-
-.background imgs/bg.png
-
-.code -edit scripts/str2.py
+```
+>>> desc = '51reboot python19'
+>>> desc[0] = 9
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+```
 
 - 结论：
-	1. 字符串不能修改
+   1. 字符串不能修改
 
 
 ### * 遍历 ###
+```python
+desc = '51reboot python'
 
-.background imgs/bg.png
-
-.code -edit scripts/str3.py
+for x in desc:
+    print(x)
+```
 
 ### * 函数 ###
+```python
 
-.background imgs/bg.png
+s = '5389721'
 
-.code -edit scripts/str4.py
+print(len(s))
+
+print(max(s), min(s))
+
+print('2' in s)
+
+print('hello' in s)
+
+```
 
 ### * 运算 ###
 
-.background imgs/bg.png
+```python
 
-.code -edit scripts/str5.py
+s1 = 'beijing' + ' ' + 'python19' + ' ' + 'monkey'
+print(s1)
+
+s2 = '-----' * 10
+print(s2)
+
+```
 
 ### * 方法 ###
 
-.background imgs/bg.png
-
-.code -edit scripts/str6.py
+方法快速查看，及本地帮助
+![str调用方法](imgs/str_fun.png)
 
 # 三、 pip3 #
 
-    - vim /etc/pip.conf
     - pip3 install ipython
 
 - str.method -> list
